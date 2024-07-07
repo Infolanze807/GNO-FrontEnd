@@ -23,7 +23,7 @@
 
 //   const handleFetchWalletData = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:5000/wallet/${address}/${password}`); // Adjust endpoint as per your backend setup
+//       const response = await axios.get(`https://gno-ten.vercel.app/wallet/${address}/${password}`); // Adjust endpoint as per your backend setup
 //       setWalletData(response.data);
 //     } catch (error) {
 //       setError('Error fetching wallet data. Please check your wallet address and password.');
@@ -84,7 +84,7 @@ function WalletCreated() {
 
   const handleFetchWalletData = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/wallet/${address}/${password}`); // Adjust endpoint as per your backend setup
+      const response = await axios.get(`https://gno-ten.vercel.app/wallet/${address}/${password}`); // Adjust endpoint as per your backend setup
       setWalletData(response.data);
       setShowPrivateKey(false); // Reset showPrivateKey state on new fetch
     } catch (error) {

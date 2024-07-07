@@ -32,7 +32,7 @@
 // //         password,
 // //       };
 // //       try {
-// //         await axios.post('http://localhost:5000/wallet', walletData);
+// //         await axios.post('https://gno-ten.vercel.app/wallet', walletData);
 // //         navigate('/wallet-created');
 // //       } catch (error) {
 // //         console.error('Error creating wallet:', error);
@@ -106,7 +106,7 @@
 //         password,
 //       };
 //       try {
-//         await axios.post('http://localhost:5000/wallet', walletData);
+//         await axios.post('https://gno-ten.vercel.app/wallet', walletData);
 //         navigate('/wallet-created');
 //       } catch (error) {
 //         console.error('Error creating wallet:', error);
@@ -192,7 +192,7 @@ function ValidatePassphrase() {
         password,
       };
       try {
-        await axios.post('http://localhost:5000/wallet', walletData);
+        await axios.post('https://gno-ten.vercel.app/wallet', walletData);
         navigate('/wallet-created');
       } catch (error) {
         console.error('Error creating wallet:', error);
