@@ -1,0 +1,173 @@
+import React, { useState } from "react";
+import { FiEyeOff, FiEye } from "react-icons/fi";
+import { FaCheckCircle, FaRegCircle } from "react-icons/fa";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { useLocation, useNavigate } from "react-router-dom";
+
+function SetPassword() {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [validations, setValidations] = useState({
+    length: false,
+    upperCase: false,
+    digit: false,
+    symbol: false,
+  });
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { wallet } = location.state;
+
+  const validatePassword = (password) => {
+    setValidations({
+      length: password.length >= 8,
+      upperCase: /[A-Z]/.test(password),
+      digit: /\d/.test(password),
+      symbol: /[!@#$%^&*(),.?":{}|<>]/.test(password),
+    });
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      password: "",
+      confirmPassword: "",
+      checkBox:false,
+    },
+    validationSchema: Yup.object({
+      password: Yup.string()
+        .required("Required"),
+      confirmPassword: Yup.string()
+        .oneOf([Yup.ref('password'), null], 'Passwords do not match')
+        .required("Required"),
+        checkBox: Yup.boolean()
+        .oneOf([true], 'Must agree to terms')
+        .required("Required"),
+    }),
+    onSubmit: (values) => {
+      navigate('/validate-passphrase', { state: { wallet, password: values.password } });
+    },
+  });
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevState) => !prevState);
+  };
+
+  return (
+    <>
+      <div className="text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH8ST6Yay0nq4aV9GjLq6gyMQKzZE4TCmfDw&s"
+          className="mb-5 h-[70px] w-[70px]"
+          alt="Logo"
+        />
+        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-3 gap-3 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[420px]">
+          <h1 className="text-base">Set Password</h1>
+          <p className="text-xs text-gray-400 text-center">
+            This password is used to protect your wallet and provide access to
+            the browser extension. It cannot be reset and it's separate from your
+            mobile wallet.
+          </p>
+
+          <form onSubmit={formik.handleSubmit} className="w-full">
+            <div className="w-full relative">
+              {passwordVisible ? (
+                <FiEye onClick={togglePasswordVisibility} className="absolute top-9 right-2" />
+              ) : (
+                <FiEyeOff onClick={togglePasswordVisibility} className="absolute top-9 right-2" />
+              )}
+              <label className="text-base">New Password</label>
+              <input
+                type={passwordVisible ? "text" : "password"}
+                placeholder="Enter a Password"
+                className="bg-[--border-color] w-full h-[40px] px-2 focus:outline-[--green-color] outline-none"
+                id="password"
+                onChange={(e) => {
+                  formik.handleChange(e);
+                  validatePassword(e.target.value);
+                }}
+                onBlur={formik.handleBlur}
+                value={formik.values.password}
+              />
+              {formik.touched.password && formik.errors.password ? (
+                <div className="text-red-500">{formik.errors.password}</div>
+              ) : null}
+            </div>
+            <div className="text-xs text-gray-400">
+              <p className="flex items-center">
+                {validations.length ? <FaCheckCircle className="text-green-500 mr-1" /> : <FaRegCircle className="mr-1" />}
+                8 or more characters
+              </p>
+              <p className="flex items-center">
+                {validations.upperCase ? <FaCheckCircle className="text-green-500 mr-1" /> : <FaRegCircle className="mr-1" />}
+                At least one upper case character
+              </p>
+              <p className="flex items-center">
+                {validations.digit ? <FaCheckCircle className="text-green-500 mr-1" /> : <FaRegCircle className="mr-1" />}
+                At least one digit
+              </p>
+              <p className="flex items-center">
+                {validations.symbol ? <FaCheckCircle className="text-green-500 mr-1" /> : <FaRegCircle className="mr-1" />}
+                At least one symbol
+              </p>
+            </div>
+            <div className="w-full relative mt-4">
+              {passwordVisible ? (
+                <FiEye onClick={togglePasswordVisibility} className="absolute top-9 right-2" />
+              ) : (
+                <FiEyeOff onClick={togglePasswordVisibility} className="absolute top-9 right-2" />
+              )}
+              <label className="text-base">Confirm new Password</label>
+              <input
+                type={passwordVisible ? "text" : "password"}
+                placeholder="Enter a Confirm Password"
+                className="bg-[--border-color] w-full h-[40px] px-2 focus:outline-[--green-color] outline-none"
+                id="confirmPassword"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.confirmPassword}
+              />
+              {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
+                <div className="text-red-500">{formik.errors.confirmPassword}</div>
+              ) : null}
+            </div>
+
+            <div className="flex gap-1 w-full justify-center items-center mt-4">
+              <input
+                type="checkbox"
+                className="bg-[--bg-color] accent-[--green-color] rounded-full"
+                value={formik.values.checkBox}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              <p>
+                I have read and agree to the
+                <span className="text-[--green-color]">Terms of Service</span>
+              </p>
+              {formik.touched.checkBox && formik.errors.checkBox ? (
+                <div className="text-red-500">{formik.errors.checkBox}</div>
+              ) : null}
+            </div>
+
+            {/* <div className="grid grid-cols-2 w-full mt-4"> */}
+              {/* <div>
+                <button className="text-[--green-color] text-base w-full p-2">
+                  Back
+                </button>
+              </div> */}
+              <div>
+                <button
+                  className="bg-[--green-color] text-white text-base w-full rounded-full p-2 mt-4"
+                  type="submit"
+                >
+                  Next
+                </button>
+              </div>
+            {/* </div> */}
+          </form>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default SetPassword;
+
