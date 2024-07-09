@@ -30,7 +30,7 @@ function SetPassword() {
     initialValues: {
       password: "",
       confirmPassword: "",
-      checkBox:false,
+      // checkBox:false,
     },
     validationSchema: Yup.object({
       password: Yup.string()
@@ -38,9 +38,9 @@ function SetPassword() {
       confirmPassword: Yup.string()
         .oneOf([Yup.ref('password'), null], 'Passwords do not match')
         .required("Required"),
-        checkBox: Yup.boolean()
-        .oneOf([true], 'Must agree to terms')
-        .required("Required"),
+        // checkBox: Yup.boolean()
+        // .oneOf([true], 'Must agree to terms')
+        // .required("Required"),
     }),
     onSubmit: (values) => {
       navigate('/validate-passphrase', { state: { wallet, password: values.password } });
@@ -134,17 +134,17 @@ function SetPassword() {
               <input
                 type="checkbox"
                 className="bg-[--bg-color] accent-[--green-color] rounded-full"
-                value={formik.values.checkBox}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // value={formik.values.checkBox}
+                // onChange={formik.handleChange}
+                // onBlur={formik.handleBlur}
               />
               <p>
                 I have read and agree to the
                 <span className="text-[--green-color]">Terms of Service</span>
               </p>
-              {formik.touched.checkBox && formik.errors.checkBox ? (
+              {/* {formik.touched.checkBox && formik.errors.checkBox ? (
                 <div className="text-red-500">{formik.errors.checkBox}</div>
-              ) : null}
+              ) : null} */}
             </div>
 
             {/* <div className="grid grid-cols-2 w-full mt-4"> */}
