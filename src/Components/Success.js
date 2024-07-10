@@ -18,10 +18,10 @@ function Success() {
           src={logo}
           className="mb-5 h-[100px] w-[90px] shadow-custom"
         />
-        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-10 rounded-2xl w-[300px]  sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[450px] ">
+        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-4 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[380px]">
         <FaCheckCircle className='text-[--green-color] text-4xl mb-5'/> 
 
-        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-10 rounded-2xl w-[300px]  sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[450px] ">
+       
        
             <div className='text-center w-full '>
                 <p className='text-lg'>Your Wallet is ready to use!</p>
@@ -35,7 +35,7 @@ function Success() {
             </div>
               </div>
         </div>
-        </div>
+       
     </>
   )
 }

@@ -61,7 +61,7 @@ function ValidatePassphrase() {
           src={logo}
           className="mb-5 h-[90px] w-[100px] shadow-custom"
         />
-      <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-10 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[450px]">
+      <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-4 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[380px]">
         <h1 className="pb-10 text-xl">Validate Passphrase Words</h1>
         <div className='w-full border-2 border-[--green-color] my-5'>
           <p className='p-3 text-balance text-center text-gray-400'>{wallet.phrase}</p>
@@ -73,7 +73,7 @@ function ValidatePassphrase() {
                 key={index}
                 type="text"
                 placeholder={`Word ${index + 1}`}
-                className="bg-gray-600 outline-none p-2"
+                className="bg-gray-600 outline-none p-2  rounded-sm "
                 value={selectedWords[index] || ''}
                 onChange={(e) => handleInputChange(index, e.target.value)}
               />
@@ -81,7 +81,7 @@ function ValidatePassphrase() {
               <input
                 key={index}
                 type="text"
-                className="bg-gray-600 outline-none p-2"
+                className="bg-gray-600 outline-none p-2 rounded-sm "
                 value={word}
                 readOnly
               />

@@ -47,20 +47,20 @@ function WalletCreated() {
           src={logo}
           className="mb-5 h-[90px] w-[100px] shadow-custom"
         />
-    <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-5 rounded-2xl w-[300px]  sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[450px] ">
+    <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-4 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[380px] ">
     <div className='w-full'>
       <h1>Wallet Details</h1>
       <div>
         {/* <label htmlFor="addressInput">Wallet Address:</label> */}
         <input id="addressInput" type="text" 
-                className="bg-[--border-color] my-4 text-base w-full h-[33px] px-2 focus:outline-[--green-color] outline-none"
+                className="bg-[--border-color] my-4 text-base  rounded-sm b w-full h-[33px] px-2 focus:outline-[--green-color] outline-none"
         placeholder='Wallet Address'
         value={address} onChange={(e) => setAddress(e.target.value)} />
       </div>
       <div>
         {/* <label htmlFor="passwordInput">Password:</label> */}
         <input id="passwordInput" type="password"
-                className="bg-[--border-color] w-full h-[40px] px-2 focus:outline-[--green-color] outline-none"
+                className="bg-[--border-color] w-full rounded-sm b h-[40px] px-2 focus:outline-[--green-color] outline-none"
         placeholder='Password'
         value={password} onChange={(e) => setPassword(e.target.value)} />
       </div>

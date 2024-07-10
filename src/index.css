@@ -15,3 +15,7 @@ body{
     --border-color:#2b2d31;
     --green-color:#22c55e;
 }
+.b
+{
+    outline: 1px solid transparent;  
+}

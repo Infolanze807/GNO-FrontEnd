@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaCheckCircle ,FaRegCircle} from "react-icons/fa";
-
 import { PiEyeFill,PiEyeSlashFill  } from "react-icons/pi";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -81,7 +80,7 @@ function SetPassword() {
               <input
                 type={passwordVisible ? "text" : "password"}
                 placeholder="Enter a Password"
-                className="bg-[--border-color] w-full h-[40px] px-2 focus:outline-[--green-color] outline-none"
+                className="bg-[--border-color] w-full h-[38px] px-2 rounded-sm focus:outline-[--green-color] b"
                 id="password"
                 onChange={(e) => {
                   formik.handleChange(e);
@@ -122,7 +121,7 @@ function SetPassword() {
               <input
                 type={passwordVisible ? "text" : "password"}
                 placeholder="Enter a Confirm Password"
-                className="bg-[--border-color] w-full h-[40px] px-2 focus:outline-[--green-color] outline-none"
+                className="bg-[--border-color] w-full h-[40px] px-2 rounded-sm focus:outline-[--green-color] outline-none b"
                 id="confirmPassword"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}

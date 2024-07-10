@@ -17,7 +17,9 @@ function Welcome() {
     setWallet(newWallet);
     navigate('/set-password', { state: { wallet: newWallet } });
   };
-
+  const handleLoginWallet = () => {
+    navigate('/login');
+  };
   return (
     <>
       <div className=" text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
@@ -26,14 +28,14 @@ function Welcome() {
          
           className="mb-5 h-[90px] w-[100px] shadow-custom"
         />
-        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-10 rounded-2xl w-[300px]  sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[450px] ">
+        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm rounded-2xl p-4 w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[380px] ">
           <div className="text-center">
             <h1 className="text-base">Welcome to the Trust Wallet Extension</h1>
             <p className="text-xs text-center text-gray-400">
               The multi-chain wallet trusted by millions
             </p>
           </div>
-          <div className="grid grid-cols-12  items-center py-5 border-b-2 border-b-[#2e3035]">
+          <div className="grid grid-cols-12  items-center py-5 border-b-2 w-full border-b-[#2e3035]">
             <div className="col-span-2">
               <IoAddCircle className="text-xl text-gray-400" />
             </div>
@@ -47,12 +49,12 @@ function Welcome() {
               <GrFormNextLink className="text-2xl text-gray-400" />
             </div>
           </div>
-          <div className="grid grid-cols-12 items-center pt-5">
+          <div className="grid grid-cols-12 w-full items-center pt-5">
             <div className="col-span-2 ">
               <MdOutlineSecurity color="gray" className=" text-xl" />
             </div>
             <div className="col-span-9">
-              <h1 className="text-base">Import or Recover Wallet</h1>
+              <h1 className="text-base cursor-pointer hover:text-[--green-color]" onClick={handleLoginWallet}>Import or Recover Wallet</h1>
               <p className="text-gray-400 text-xs">
                 Import with your Secret Phrase
               </p>
