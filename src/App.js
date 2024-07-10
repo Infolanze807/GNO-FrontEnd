@@ -29,6 +29,7 @@ import Main from './Components/Main';
 import Success from './Components/Success';
 import Login from './Components/Login';
 import Navbar from './Components/Navbar';
+import logo from '../public/gno-wallet.png'
 
 function App() {
   return (

@@ -5,12 +5,12 @@ function Success() {
     <>
     <div className=" text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH8ST6Yay0nq4aV9GjLq6gyMQKzZE4TCmfDw&s"
+          src="../public/gno-wallet.png"
           className="mb-5 h-[50px] w-[50px]"
         />
         <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-10 rounded-2xl w-[300px]  sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[450px] ">
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH8ST6Yay0nq4aV9GjLq6gyMQKzZE4TCmfDw&s"
+          src="../public/gno-wallet.png"
           className="mb-5 h-[40px] w-[40px]"
         />  
             <div className='text-center w-full '>

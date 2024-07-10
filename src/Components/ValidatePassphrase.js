@@ -56,7 +56,7 @@ function ValidatePassphrase() {
   return (
     <div className="text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH8ST6Yay0nq4aV9GjLq6gyMQKzZE4TCmfDw&s"
+        src="../public/gno-wallet.png"
         className="mb-5 h-[50px] w-[50px]"
         alt="Logo"
       />
