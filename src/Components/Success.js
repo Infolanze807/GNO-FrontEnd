@@ -1,12 +1,14 @@
 import React from 'react'
+import logo from '../src/gno-wallet.png'
+
 
 function Success() {
   return (
     <>
     <div className=" text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
-        <img
-          src="../public/gno-wallet.png"
-          className="mb-5 h-[50px] w-[50px]"
+    <img
+          src={logo}
+          className="mb-5 h-[90px] w-[100px] shadow-custom"
         />
         <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-10 rounded-2xl w-[300px]  sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[450px] ">
         <img

@@ -4,6 +4,8 @@ import { FaCheckCircle, FaRegCircle } from "react-icons/fa";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useLocation, useNavigate } from "react-router-dom";
+import logo from '../src/gno-wallet.png'
+
 
 function SetPassword() {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -54,10 +56,9 @@ function SetPassword() {
   return (
     <>
       <div className="text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
-        <img
-          src="../public/gno-wallet.png"
-          className="mb-5 h-[70px] w-[70px]"
-          alt="Logo"
+      <img
+          src={logo}
+          className="mb-5 h-[90px] w-[100px] shadow-custom"
         />
         <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-3 gap-3 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[420px]">
           <h1 className="text-base">Set Password</h1>
