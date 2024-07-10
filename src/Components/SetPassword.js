@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FiEyeOff, FiEye } from "react-icons/fi";
 import { FaCheckCircle ,FaRegCircle} from "react-icons/fa";
 
 import { PiEyeFill,PiEyeSlashFill  } from "react-icons/pi";
@@ -7,7 +6,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import logo from '../Images/gno-wallet.png'
 import { useLocation, useNavigate } from "react-router-dom";
-import logo from '../src/gno-wallet.png'
 
 
 function SetPassword() {
@@ -75,9 +73,9 @@ function SetPassword() {
           <form onSubmit={formik.handleSubmit} className="w-full">
             <div className="w-full relative">
               {passwordVisible ? (
-                <PiEyeFill onClick={togglePasswordVisibility} className="absolute top-9 right-2 text-[--green-color]" />
+                <PiEyeFill onClick={togglePasswordVisibility} className="absolute top-9 right-2 text-[--green-color] font-semibold" />
               ) : (
-                <PiEyeSlashFill onClick={togglePasswordVisibility} className="absolute top-9 right-2 text-[--green-color]" />
+                <PiEyeSlashFill onClick={togglePasswordVisibility} className="absolute top-9 right-2 text-[--green-color] font-semibold" />
               )}
               <label className="text-base">New Password</label>
               <input
@@ -116,9 +114,9 @@ function SetPassword() {
             </div>
             <div className="w-full relative ">
               {passwordVisible ? (
-                <PiEyeFill onClick={togglePasswordVisibility} className="absolute top-9 right-2 text-[--green-color]" />
+                <PiEyeFill onClick={togglePasswordVisibility} className="absolute top-9 right-2 text-[--green-color] font-semibold" />
               ) : (
-                <PiEyeSlashFill onClick={togglePasswordVisibility} className="absolute top-9 right-2 text-[--green-color]" />
+                <PiEyeSlashFill onClick={togglePasswordVisibility} className="absolute top-9 right-2 text-[--green-color] font-semibold" />
               )}
               <label className="text-base">Confirm new Password</label>
               <input
