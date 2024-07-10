@@ -5,7 +5,11 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      boxShadow:{
+        'custom':'0px 25px 20px -20px rgba(34,197,94,1)',
+      }
+    },
   },
   plugins: [
     require('preline/plugin'),

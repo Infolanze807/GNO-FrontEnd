@@ -4,6 +4,8 @@ import { GrFormNextLink } from "react-icons/gr";
 import { MdOutlineSecurity } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 import { generateWallet } from '../Utils/GenrateWallet';
+import logo from '../Images/gno-wallet.png'
+
 
 function Welcome() {
       const [wallet, setWallet] = useState(null);
@@ -18,9 +20,9 @@ function Welcome() {
   return (
     <>
       <div className=" text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH8ST6Yay0nq4aV9GjLq6gyMQKzZE4TCmfDw&s"
-          className="mb-5 h-[70px] w-[70px]"
+      <img
+          src={logo}
+          className="mb-5 h-[100px] w-[90px] shadow-custom"
         />
         <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-10 rounded-2xl w-[300px]  sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[450px] ">
           <div className="text-center">
