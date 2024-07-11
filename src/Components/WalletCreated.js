@@ -156,7 +156,7 @@ function WalletCreated() {
             <input
               id="passwordInput"
               type="password"
-              className="bg-[--border-color] w-full h-[40px] px-2 focus:outline-[--green-color] outline-none"
+              className="bg-[--input-color] w-full h-[40px] px-2 rounded-sm focus:outline-[--green-color] outline-none b"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}

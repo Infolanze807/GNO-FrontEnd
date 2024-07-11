@@ -80,7 +80,7 @@ function SetPassword() {
               <input
                 type={passwordVisible ? "text" : "password"}
                 placeholder="Enter a Password"
-                className="bg-[--border-color] w-full h-[38px] px-2 rounded-sm focus:outline-[--green-color] b"
+                className="bg-[--input-color] w-full h-[38px] px-2 rounded-sm focus:outline-[--green-color] b"
                 id="password"
                 onChange={(e) => {
                   formik.handleChange(e);
@@ -121,7 +121,7 @@ function SetPassword() {
               <input
                 type={passwordVisible ? "text" : "password"}
                 placeholder="Enter a Confirm Password"
-                className="bg-[--border-color] w-full h-[40px] px-2 rounded-sm focus:outline-[--green-color] outline-none b"
+                className="bg-[--input-color] w-full h-[40px] px-2 rounded-sm focus:outline-[--green-color] outline-none b"
                 id="confirmPassword"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -135,7 +135,7 @@ function SetPassword() {
             <div className="flex gap-1 w-full justify-center items-center mt-4">
               <input
                 type="checkbox"
-                className="bg-[--bg-color] accent-[--green-color] rounded-full"
+                className="bg-[--input-color] w-full h-[40px] px-2 rounded-sm focus:outline-[--green-color] outline-none b"
                 // value={formik.values.checkBox}
                 // onChange={formik.handleChange}
                 // onBlur={formik.handleBlur}

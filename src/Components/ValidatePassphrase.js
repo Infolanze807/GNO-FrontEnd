@@ -73,7 +73,7 @@ function ValidatePassphrase() {
                 key={index}
                 type="text"
                 placeholder={`Word ${index + 1}`}
-                className="bg-gray-600 outline-none p-2  rounded-sm "
+                className="bg-[--input-color] outline-none p-2  rounded-sm "
                 value={selectedWords[index] || ''}
                 onChange={(e) => handleInputChange(index, e.target.value)}
               />

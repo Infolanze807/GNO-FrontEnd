@@ -1,33 +1,27 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { IoAddCircle } from "react-icons/io5";
 import { GrFormNextLink } from "react-icons/gr";
 import { MdOutlineSecurity } from "react-icons/md";
-import { useNavigate } from 'react-router-dom';
-import { generateWallet } from '../Utils/GenrateWallet';
-import logo from '../Images/gno-wallet.png'
-
-
+import { Link, useNavigate } from "react-router-dom";
+import { generateWallet } from "../Utils/GenrateWallet";
+import logo from "../Images/gno-wallet.png";
 
 function Welcome() {
-      const [wallet, setWallet] = useState(null);
+  const [wallet, setWallet] = useState(null);
   const navigate = useNavigate();
 
   const handleCreateWallet = () => {
     const newWallet = generateWallet();
     setWallet(newWallet);
-    navigate('/set-password', { state: { wallet: newWallet } });
+    navigate("/set-password", { state: { wallet: newWallet } });
   };
   const handleLoginWallet = () => {
-    navigate('/login');
+    navigate("/login");
   };
   return (
     <>
       <div className=" text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
-      <img
-          src={logo}
-         
-          className="mb-5 h-[90px] w-[100px] shadow-custom"
-        />
+        <img src={logo} className="mb-5 h-[90px] w-[100px] shadow-custom" />
         <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm rounded-2xl p-4 w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[380px] ">
           <div className="text-center">
             <h1 className="text-base">Welcome to the Trust Wallet Extension</h1>
@@ -40,7 +34,16 @@ function Welcome() {
               <IoAddCircle className="text-xl text-gray-400" />
             </div>
             <div className="col-span-9">
-              {! wallet ? (<h1 className="text-base cursor-pointer hover:text-[--green-color]" onClick={handleCreateWallet}>Create a new wallet</h1>) :(<div>hello</div>) }
+              {!wallet ? (
+                <h1
+                  className="text-base cursor-pointer hover:text-[--green-color]"
+                  onClick={handleCreateWallet}
+                >
+                  Create a new wallet
+                </h1>
+              ) : (
+                <div>hello</div>
+              )}
               <p className="text-gray-400 text-xs">
                 start fresh with a new wallet
               </p>
@@ -49,12 +52,14 @@ function Welcome() {
               <GrFormNextLink className="text-2xl text-gray-400" />
             </div>
           </div>
-          <div className="grid grid-cols-12 w-full items-center pt-5">
+          <div className="grid grid-cols-12 w-full items-center py-5 border-b-2 border-b-[#2e3035]">
             <div className="col-span-2 ">
               <MdOutlineSecurity color="gray" className=" text-xl" />
             </div>
             <div className="col-span-9">
-              <h1 className="text-base cursor-pointer hover:text-[--green-color]" onClick={handleLoginWallet}>Import or Recover Wallet</h1>
+              <h1 className="text-base cursor-pointer hover:text-[--green-color]">
+                Import or Recover Wallet
+              </h1>
               <p className="text-gray-400 text-xs">
                 Import with your Secret Phrase
               </p>
@@ -63,6 +68,10 @@ function Welcome() {
               <GrFormNextLink className="text-2xl text-gray-400" />
             </div>
           </div>
+          <div className=" w-full pt-5 flex justify-center">
+           <p className="text-xs">if you have Account,<Link to={'/login'}><span className="text-[--green-color] pl-2 text-[15px]">login here</span></Link></p>
+          </div>
+         
         </div>
       </div>
     </>
