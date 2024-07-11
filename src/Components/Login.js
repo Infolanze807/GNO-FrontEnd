@@ -76,6 +76,7 @@ function Login({ setFunctionData }) {
                    Unblock
               </button>
               {error && <p style={{ color: "red" }}>{error}</p>}
+              {error && <p style={{ color: "red" }}>{error}</p>}
             </div>
             </form>
               </div>
