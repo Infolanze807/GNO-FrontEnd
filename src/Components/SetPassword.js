@@ -135,7 +135,7 @@ function SetPassword() {
             <div className="flex gap-1 w-full justify-center items-center mt-4">
               <input
                 type="checkbox"
-                className="w-full h-[40px] px-2 rounded-sm focus:outline-[--green-color] outline-none b"
+                className="h-[40px] px-2 rounded-sm focus:outline-[--green-color] outline-none b"
                 // value={formik.values.checkBox}
                 // onChange={formik.handleChange}
                 // onBlur={formik.handleBlur}
