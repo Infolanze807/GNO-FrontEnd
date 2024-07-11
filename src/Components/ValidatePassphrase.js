@@ -81,7 +81,7 @@ function ValidatePassphrase() {
               <input
                 key={index}
                 type="text"
-                className="bg-gray-600 outline-none p-2 rounded-sm "
+                className="bg-gray-600 outline-none p-2 rounded-sm bg-[--input-color]"
                 value={word}
                 readOnly
               />

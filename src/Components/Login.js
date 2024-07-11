@@ -61,7 +61,7 @@ function Login({ setFunctionData }) {
               <label className="text-base">Password</label>
               <input
                 type={passwordVisible ? "text" : "password"}
-                className="bg-[--border-color] w-full h-[40px] px-2 focus:outline-[--green-color] outline-none"
+                className="bg-[--input-color] w-full h-[40px] px-2 focus:outline-[--green-color] outline-none"
                 id="password"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -75,7 +75,6 @@ function Login({ setFunctionData }) {
             <button type = "submit" className="bg-[--green-color] text-white text-base w-full rounded-full p-2 mt-4" >
                    Unblock
               </button>
-              {error && <p style={{ color: "red" }}>{error}</p>}
               {error && <p style={{ color: "red" }}>{error}</p>}
             </div>
             </form>
