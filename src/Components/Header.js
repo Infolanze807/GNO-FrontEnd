@@ -8,7 +8,13 @@ const Header = ({ handleMenu,walletAddress}) => {
 //     const lastFour = address.substring(address.length - 4);
 //     return `${firstFour}....${lastFour}`; 
 //   };
-
+const copyToClipboard = () => {
+  navigator.clipboard.writeText(walletAddress).then(() => {
+    alert('Wallet address copied to clipboard!');
+  }).catch(err => {
+    console.error('Could not copy text: ', err);
+  });
+};
   return (
     <div className="grid grid-cols-12 p-3 mt-4 mx-3 md:mx-5 lg:mx-8 justify-stretch rounded-xl items-center bg-[--green-color]">
       <div className="col-span-4 flex text-white items-center">
@@ -18,7 +24,13 @@ const Header = ({ handleMenu,walletAddress}) => {
           alt="Logo"
         />
         {/* <p className='pl-3'>{formatWalletAddress(walletAddress)}</p> */}
-        <p className='pl-3'>{walletAddress}</p>
+        {/* <p className='pl-3 text-sm lg:text-base'>{walletAddress}</p> */}
+        <p
+      className='pl-3 text-sm lg:text-base cursor-pointer'
+      onClick={copyToClipboard}
+    >
+      {walletAddress}
+    </p>
       </div>
       <div className="col-span-8 flex text-white items-center justify-end">
         <button onClick={handleMenu}>
