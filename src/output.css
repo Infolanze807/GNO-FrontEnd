@@ -679,8 +679,8 @@ video {
   height: 1.5rem;
 }
 
-.h-\[100vh\] {
-  height: 100vh;
+.h-\[90vh\] {
+  height: 90vh;
 }
 
 .h-\[50px\] {
@@ -1069,8 +1069,8 @@ video {
 }
 
 @media (min-width: 1280px) {
-  .xl\:h-\[100vh\] {
-    height: 100vh;
+  .xl\:h-\[90vh\] {
+    height: 90vh;
   }
 
   .xl\:w-\[450px\] {

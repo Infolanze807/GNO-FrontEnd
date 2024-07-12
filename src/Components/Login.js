@@ -41,7 +41,7 @@ function Login({ setFunctionData }) {
 
   return (
     <>
-    <div className=" text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
+    <div className=" text-white flex flex-col items-center h-[90vh] md:h-[95vh] lg:h-[80vh] xl:h-[90vh] justify-center">
         <img
           src={logo}
           className="mb-5 h-[100px] w-[90px] shadow-custom"

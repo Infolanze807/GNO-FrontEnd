@@ -20,7 +20,7 @@ function Welcome() {
   };
   return (
     <>
-      <div className=" text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
+      <div className=" text-white flex flex-col items-center h-[90vh] md:h-[95vh] lg:h-[80vh] xl:h-[90vh] justify-center">
         <img src={logo} className="mb-5 h-[90px] w-[100px] shadow-custom" />
         <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm rounded-2xl p-4 w-[300px] sm:w-[320px] md:w-[350px] lg:w-[350px] xl:w-[350px] ">
           <div className="text-center">
