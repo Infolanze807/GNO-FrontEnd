@@ -18,7 +18,7 @@ function Success() {
           src={logo}
           className="mb-5 h-[100px] w-[90px] shadow-custom"
         />
-        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-4 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[380px]">
+        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-4 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[350px] xl:w-[350px]">
         <FaCheckCircle className='text-[--green-color] text-4xl mb-5'/> 
 
        

@@ -12,15 +12,16 @@ function ImportWallet() {
   };
   return (
     <>
-      <div className=" text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
+      <div className=" text-white flex flex-col items-center h-full md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
         <img src={logo} className="mb-5 h-[90px] w-[100px] shadow-custom" />
-        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm rounded-2xl p-4 w-[300px] sm:w-[320px] md:w-[350px] lg:w-[320px] xl:w-[350px] ">
+        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm rounded-2xl p-4 w-[300px] sm:w-[320px] md:w-[350px] lg:w-[350px] xl:w-[350px] ">
           <div className="border-t-2 border-t-[--green-color] border-b-2 border-b-[--green-color]   w-full py-3">
             <div>
-              <select onChange={handleDropDownChange} value={selectedOption} className="bg-[--border-color] w-full text-sm rounded-sm focus:outline-[--green-color] outline-none b">
+              <select onChange={handleDropDownChange} value={selectedOption} className="bg-[--border-color] h-[35px] px-2 w-full text-sm rounded-sm focus:outline-[--green-color] outline-none b">
               <option
                   value=""
-                  className="text-sm accent-slate-900"
+                  disabled selected
+                  className="text-sm accent-slate-900 "
                 >
                  Select
                 </option>

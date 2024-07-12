@@ -15,16 +15,16 @@ function Welcome() {
     setWallet(newWallet);
     navigate("/set-password", { state: { wallet: newWallet } });
   };
-  const handleLoginWallet = () => {
-    navigate("/login");
+  const handleImportWallet = () => {
+    navigate("/importWallet");
   };
   return (
     <>
       <div className=" text-white flex flex-col items-center h-[100vh] md:h-[95vh] lg:h-[80vh] xl:h-[100vh] justify-center">
         <img src={logo} className="mb-5 h-[90px] w-[100px] shadow-custom" />
-        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm rounded-2xl p-4 w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[380px] ">
+        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm rounded-2xl p-4 w-[300px] sm:w-[320px] md:w-[350px] lg:w-[350px] xl:w-[350px] ">
           <div className="text-center">
-            <h1 className="text-base">Welcome to the Trust Wallet Extension</h1>
+            <h1 className="text-base">Welcome to the GNO Wallet Extension</h1>
             <p className="text-xs text-center text-gray-400">
               The multi-chain wallet trusted by millions
             </p>
@@ -57,7 +57,7 @@ function Welcome() {
               <MdOutlineSecurity color="gray" className=" text-xl" />
             </div>
             <div className="col-span-9">
-              <h1 className="text-base cursor-pointer hover:text-[--green-color]">
+              <h1 className="text-base cursor-pointer hover:text-[--green-color]"  onClick={handleImportWallet}>
                 Import or Recover Wallet
               </h1>
               <p className="text-gray-400 text-xs">
@@ -68,7 +68,7 @@ function Welcome() {
               <GrFormNextLink className="text-2xl text-gray-400" />
             </div>
           </div>
-          <div className=" w-full pt-5 flex justify-center">
+          <div className=" w-full pt-3 flex justify-center">
            <p className="text-xs">if you have Account,<Link to={'/login'}><span className="text-[--green-color] pl-2 text-[15px]">login here</span></Link></p>
           </div>
          
