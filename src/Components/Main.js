@@ -5,8 +5,40 @@ import { CiCreditCard1 } from "react-icons/ci";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import { getWeb3 } from "../Utils/Rpc";
+import Send from "./Send";
 
 function Main({walletAddress}) {
+  const [navbar, setNavbar] = useState(false);
+  const [balance, setBalance] = useState(null);
+  const [send,setSend]=useState(false);
+  const [receive,setReceive]=useState(false);
+  const [swap,setSwap]=useState(false);
+  const [buy_sell,setBuy_Sell]=useState(false);
+
+  const showSend = ()=>{
+    setSend(true);
+    setReceive(false);
+    setSwap(false);
+    setBuy_Sell(false);
+  }
+  const showReceive = ()=>{
+    setSend(false);
+    setReceive(true);
+    setSwap(false);
+    setBuy_Sell(false);
+  }
+  const showSwap = ()=>{
+    setSend(false);
+    setReceive(false);
+    setSwap(true);
+    setBuy_Sell(false);
+  }
+  const showBuy_Sell = ()=>{
+    setSend(false);
+    setReceive(false);
+    setSwap(false);
+    setBuy_Sell(true);
+  }
 
   useEffect(() => {
     const fetchBalance = async () => {
@@ -25,10 +57,6 @@ function Main({walletAddress}) {
     fetchBalance();
   }, [walletAddress]);
 
-  const [navbar, setNavbar] = useState(false);
-  const [balance, setBalance] = useState(null);
-
-
   const handleMenu = () => {
     setNavbar((prev) => !prev);
   };
@@ -41,7 +69,7 @@ function Main({walletAddress}) {
       <div className="text-white text-xl md:text-2xl lg:text-3xl font-bold pb-5">$ : {balance !== null ? `${balance} xDAI` : "Loading..."}</div>
         <div className="grid grid-cols-4 xl:gap-8 lg:gap-6 md:gap-5 sm:gap-3 gap-2 text-black">
           <div className="flex flex-col items-center">
-            <button className="lg:p-4 md:p-3 sm:p-2 p-2 bg-[--green-color] text-white text-4xl rounded-full">
+            <button onClick={showSend} className="lg:p-4 md:p-3 sm:p-2 p-2 bg-[--green-color] text-white text-4xl rounded-full">
               <IoMdArrowRoundUp />
             </button>
             <p className="text-white">Send</p>
@@ -65,6 +93,7 @@ function Main({walletAddress}) {
             <p className="text-white">Buy & Sell</p>
           </div>
         </div>
+        {send && <Send/>}
       </div>
     </>
   );

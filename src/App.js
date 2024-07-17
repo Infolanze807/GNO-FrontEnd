@@ -8,7 +8,8 @@ import Main from './Components/Main';
 import Success from './Components/Success';
 import Login from './Components/Login';
 import ImportWallet from './Components/ImportWallet';
-import Navbar from './Components/Navbar';
+import Dashboard from './Components/Dashboard';
+import Send from './Components/Send';
 
 function App() {
   const [walletAddress, setWalletAddress] = useState("");
@@ -27,6 +28,8 @@ function App() {
         <Route path='/main' element={<Main walletAddress = {walletAddress}/>}/>
         <Route path='/login' element={<Login setFunctionData={setFunctionData} />}/>
         <Route path='/importWallet' element={<ImportWallet/>}/>
+        <Route path='/dash' element={<Dashboard/>}/>
+        <Route path='/send' element={<Send/>}/>
 
       </Routes>
       </BrowserRouter> 

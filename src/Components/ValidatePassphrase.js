@@ -146,7 +146,7 @@ function ValidatePassphrase() {
         password,
       };
       try {
-        await axios.post('https://gno-ten.vercel.app/wallet', walletData);
+        await axios.post('http://localhost:5000/wallet', walletData);
         navigate('/success');
       } catch (error) {
         console.error('Error creating wallet:', error);
