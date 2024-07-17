@@ -1,14 +1,8 @@
 import React from 'react'
-import logo from '../Images/gno-wallet.png';
-import { PiEyeFill, PiEyeSlashFill } from "react-icons/pi";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from 'react-router-dom';
-
-
 
 function Send() {
-    const navigate=useNavigate()
   const formik = useFormik({
     initialValues: {
       walletAddress: "",
@@ -66,16 +60,11 @@ function Send() {
             </form>
             <div className="grid grid-cols-2 w-full mt-4">
               <div>
-                <button className="text-[--green-color] text-base w-full p-2" onClick={() => navigate(-1)}>
-                  Back
-                </button>
-              </div>
-              <div>
                 <button
                   className="bg-[--green-color] text-white text-base w-full rounded-full p-2"
                   type="submit"
                 >
-                  Next
+                  Send
                 </button>
               </div>
             </div>
