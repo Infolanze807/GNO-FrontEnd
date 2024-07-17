@@ -6,6 +6,7 @@ import Header from "./Header";
 import Navbar from "./Navbar";
 import { getWeb3 } from "../Utils/Rpc";
 import Send from "./Send";
+import Receive from "./Receive";
 
 function Main({walletAddress}) {
   const [navbar, setNavbar] = useState(false);
@@ -75,7 +76,7 @@ function Main({walletAddress}) {
             <p className="text-white">Send</p>
           </div>
           <div className="flex flex-col items-center">
-            <button className="lg:p-4 md:p-3 sm:p-2 p-2 bg-[--green-color] text-white text-4xl rounded-full">
+            <button onClick={showReceive} className="lg:p-4 md:p-3 sm:p-2 p-2 bg-[--green-color] text-white text-4xl rounded-full">
               <IoMdArrowRoundDown />
             </button>
             <p className="text-white">Receive</p>
@@ -94,6 +95,7 @@ function Main({walletAddress}) {
           </div>
         </div>
         {send && <Send/>}
+        {receive && <Receive/>}
       </div>
     </>
   );

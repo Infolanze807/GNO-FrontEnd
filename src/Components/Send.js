@@ -58,7 +58,7 @@ function Send() {
                 <div className="text-red-500">{formik.errors.amount}</div>
               ) : null}</div>
             </form>
-            <div className="grid grid-cols-2 w-full mt-4">
+            <div className=" w-full mt-4">
               <div>
                 <button
                   className="bg-[--green-color] text-white text-base w-full rounded-full p-2"
