@@ -46,7 +46,7 @@ function Login({ setFunctionData }) {
     <>
       <div className="text-white flex flex-col items-center h-[100vh] md:h-[90vh] lg:h-[90vh] xl:h-[90vh] justify-center">
         <img src={logo} className="mb-5 h-[100px] w-[90px] shadow-custom" />
-        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-10 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[450px]">
+        <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-10 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[350px] xl:w-[350px]">
           <div className="text-center w-full">
             <p className="text-lg">Secure and trusted multi-chain crypto wallet</p>
           </div>

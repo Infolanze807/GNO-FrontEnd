@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import logo from "../Images/gno-wallet.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import DropDownPhrase from "./DropDownPhrase";
 import DropDownPrivateKey from "./DropDownPrivateKey";
 
 function ImportWallet() {
   const [selectedOption, setSelectedOption] = useState("");
+  const navigate = useNavigate();
+
 
   const handleDropDownChange = (event) => {
     setSelectedOption(event.target.value);
@@ -46,6 +48,11 @@ function ImportWallet() {
                 </div>
               )}
             </div>
+             {/* <div className="w-full my-2">
+            <button className="text-[--green-color] text-base w-full " onClick={() => navigate(-1)}>
+                  Back
+                </button>
+            </div>  */}
           </div>
         </div>
       </div>
