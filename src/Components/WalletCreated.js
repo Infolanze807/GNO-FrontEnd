@@ -15,7 +15,7 @@ function WalletCreated() {
       const WalletData = localStorage.getItem("Wallet Data:");
       const FetchWalletData = JSON.parse(WalletData);
       const address = FetchWalletData.Wallet_address;
-       const response = await axios.get(`https://gno-ten.vercel.app/wallet/${address}/${password}`);
+       const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/${address}/${password}`);
       setWalletData(response.data);
       setShowPrivateKey(false); // Reset showPrivateKey state on new fetch
       setError(null); // Reset error state on new fetch

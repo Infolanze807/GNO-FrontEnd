@@ -23,7 +23,7 @@ function Login({ setFunctionData }) {
        const WalletData = localStorage.getItem("Wallet Data:");
        const FetchWalletData = JSON.parse(WalletData);
        const address = FetchWalletData.Wallet_address;
-        const response = await axios.get(`https://gno-ten.vercel.app/wallet/${address}/${values.password}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/${address}/${values.password}`);
         console.log(response);
         if (response.data && response.data.success) {
           console.log(response.data.address);

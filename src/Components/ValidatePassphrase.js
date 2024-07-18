@@ -42,7 +42,7 @@ function ValidatePassphrase() {
         password,
       };
       try {
-        const respone = await axios.post('https://gno-ten.vercel.app/wallet', walletData);
+        const respone = await axios.post('${process.env.REACT_APP_BACKEND}/wallet', walletData);
         console.log(respone)
         const {address,_id} = respone.data.wallet;
 
