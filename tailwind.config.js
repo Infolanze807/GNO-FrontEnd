@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.html', './src/**/*.js','node_modules/preline/dist/*.js'],
+  content: ['./src/**/*.html', './src/**/*.js', 'node_modules/preline/dist/*.js', 'node_modules/flowbite-react/lib/esm/**/*.js'],
   theme: {
     container: {
       center: true,
@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: [
     require('preline/plugin'),
+    require('flowbite/plugin'),
   ],
 }
 
