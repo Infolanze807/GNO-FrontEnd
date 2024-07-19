@@ -71,11 +71,27 @@ function Login({ setFunctionData }) {
                 <div className="text-red-500">{formik.errors.password}</div>
               ) : null}
             </div>
-            <div className="w-full my-4">
+            {/* <div className="w-full my-4">
               <button type="submit" className="bg-[--green-color] text-white text-base w-full rounded-full p-2 mt-4">
                 Unblock
               </button>
               {error && <p style={{ color: "red" }}>{error}</p>}
+            </div> */}
+            <div className="grid grid-cols-2 w-full mt-4">
+              <div>
+                <button className="text-[--green-color] text-base w-full p-2" onClick={() => navigate(-1)}>
+                  Back
+                </button>
+              </div>
+              <div>
+                <button
+                  className="bg-[--green-color] text-white text-base w-full rounded-full p-2"
+                  type="submit"
+                >
+                  Unlock
+                </button>
+                {error && <p style={{ color: "red" }}>{error}</p>}
+              </div>
             </div>
           </form>
         </div>

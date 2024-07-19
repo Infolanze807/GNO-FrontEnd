@@ -1,8 +1,7 @@
-// import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { IoMdArrowRoundUp, IoMdArrowRoundDown } from "react-icons/io";
 import { MdSwapHorizontalCircle } from "react-icons/md";
 import { CiCreditCard1 } from "react-icons/ci";
-import QRCode from "qrcode.react";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import { getWeb3 } from "../Utils/Rpc";

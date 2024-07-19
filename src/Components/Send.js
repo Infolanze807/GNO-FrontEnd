@@ -24,7 +24,7 @@ function Send({ walletAddress, balance }) {
 
   const fetchPrivateKey = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/wallet/${walletAddress}/${password}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/${walletAddress}/${password}`);
       const encryptedPrivateKey = response.data.encryptedPrivateKey;
       const decryptedPrivateKey = decryptPrivateKey(encryptedPrivateKey, password);
       setPrivateKey(decryptedPrivateKey);
