@@ -9,7 +9,7 @@ const User = () => {
   return (
     <div className="lg:px-28 md:px-16 px-5">
       <div className="">
-        <div className="lg:px-28 md:px-14 px-5 lg:py-14 md:py-14 py-8 pb-24 bg-gradient-to-b from-[#fff4ad] to-[#ffaefe] rounded-3xl">
+        <div className="lg:px-28 md:px-14 px-5 lg:py-14 md:py-14 py-8 lg:pb-24 pb-24 md:pb-24 bg-gradient-to-b from-[#fff4ad] to-[#ffaefe] rounded-3xl">
           <div className="text-center font-bold text-5xl pb-5">
             Simple. Seamless.
           </div>
