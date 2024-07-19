@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { encryptPrivateKey } from "../Utils/Crypto";
 import axios from "axios";
 import logo from "../Images/gno-wallet.png";
+import { FaRegCopy } from "react-icons/fa";
 
 function ValidatePassphrase() {
   const [selectedWords, setSelectedWords] = useState([]);
@@ -65,6 +66,15 @@ function ValidatePassphrase() {
     setSelectedWords(updatedWords);
     setValidationError("");
   };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(wallet.phrase).then(() => {
+      alert('Phrase copied to clipboard!');
+    }).catch(err => {
+      console.error('Could not copy text: ', err);
+    });
+  };
+
 
   return (
     <div className="text-white flex flex-col items-center h-[100vh] md:h-[90vh] lg:h-[90vh] xl:h-[90vh] justify-center">
