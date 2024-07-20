@@ -18,25 +18,54 @@ function Login({ setFunctionData }) {
     validationSchema: Yup.object({
       password: Yup.string().required("Required"),
     }),
-    onSubmit: async (values) => {
-      try {
-       const WalletData = localStorage.getItem("Wallet Data:");
-       const FetchWalletData = JSON.parse(WalletData);
-       const address = FetchWalletData.Wallet_address;
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/${address}/${values.password}`);
-        console.log(response);
-        if (response.data && response.data.success) {
-          console.log(response.data.address);
-          setFunctionData(response.data.address);
-          navigate("/main");
-        } else {
-          setError("Invalid address or password. Please try again.");
-        }
-      } catch (error) {
+  //   onSubmit: async (values) => {
+  //     try {
+  //      const WalletData = localStorage.getItem("Wallet Data:");
+  //      const FetchWalletData = JSON.parse(WalletData);
+  //      const address = FetchWalletData.Wallet_address;
+  //       const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/${address}/${values.password}`);
+  //       console.log(response);
+  //       if (response.data && response.data.success) {
+  //         console.log(response.data.address);
+  //         setFunctionData(response.data.address);
+  //         navigate("/main");
+  //       } else {
+  //         setError("Invalid address or password. Please try again.");
+  //       }
+  //     } catch (error) {
+  //       setError("Invalid address or password. Please try again.");
+  //     }
+  //   },
+  // });
+  onSubmit: async (values) => {
+    try {
+      const WalletData = localStorage.getItem("Wallet Data:");
+      const FetchWalletData = JSON.parse(WalletData);
+      const address = FetchWalletData.Wallet_address;
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/${address}/${values.password}`);
+      
+      if (response.data && response.data.success) {
+        console.log(response.data.address);
+        setFunctionData(response.data.address);
+        navigate("/main");
+      } else {
         setError("Invalid address or password. Please try again.");
       }
-    },
-  });
+    } catch (error) {
+      if (error.response) {
+        // The request was made and the server responded with a status code that falls out of the range of 2xx
+        setError(`Error: ${error.response.data.message || "Invalid address or password. Please try again."}`);
+      } else if (error.request) {
+        // The request was made but no response was received
+        setError("Network error: Unable to reach the backend. Please check your internet connection or try again later.");
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        setError("An unexpected error occurred. Please try again.");
+      }
+      console.error("Error during authentication:", error);
+    }
+  },
+});
 
   const togglePasswordVisibility = () => {
     setPasswordVisible((prevState) => !prevState);
@@ -90,9 +119,9 @@ function Login({ setFunctionData }) {
                 >
                   Unlock
                 </button>
-                {error && <p style={{ color: "red" }}>{error}</p>}
               </div>
             </div>
+            {error && <p style={{ color: "red" }}>{error}</p>}
           </form>
         </div>
       </div>

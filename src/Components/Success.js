@@ -26,7 +26,7 @@ function Success() {
             <div className='text-center w-full '>
                 <p className='text-lg'>Your Wallet is ready to use!</p>
                 <p className='text-sm mt-2 text-gray-400'>Remember to backup and keep your Secret Phrase safe.</p>
-                <p className='text-sm  text-gray-400'>Remember to backup and keep your Secret PrivateKey safe.</p>
+                {/* <p className='text-sm  text-gray-400'>Remember to backup and keep your Secret PrivateKey safe.</p> */}
             </div>
             <div className='w-full my-4'>
             <button className="bg-[--green-color] text-white text-base w-full rounded-full p-2 mt-4" onClick={handleSuccess}>
