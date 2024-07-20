@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../Images/gno-wallet.png';
 import QRCode from 'qrcode.react';
 import { FaRegCopy } from 'react-icons/fa';
+import copy from "copy-to-clipboard";
 
 
 function Receive({walletAddress}) {
@@ -14,11 +15,8 @@ function Receive({walletAddress}) {
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(walletAddress).then(() => {
-      alert('Wallet address copied to clipboard!');
-    }).catch(err => {
-      console.error('Could not copy text: ', err);
-    });
+    copy(walletAddress)
+    alert("copied..!")
   };
   return (
     <>

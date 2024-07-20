@@ -131,6 +131,7 @@ import axios from "axios";
 import logo from "../Images/gno-wallet.png";
 import { FaRegCopy } from "react-icons/fa";
 import { FaSpinner } from "react-icons/fa"; // Import spinner icon
+import copy from "copy-to-clipboard";
 
 function ValidatePassphrase() {
   const [selectedWords, setSelectedWords] = useState([]);
@@ -198,11 +199,8 @@ function ValidatePassphrase() {
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(wallet.phrase).then(() => {
-      alert('Phrase copied to clipboard!');
-    }).catch(err => {
-      console.error('Could not copy text: ', err);
-    });
+    copy(wallet.phrase)
+    alert("copied..!")
   };
 
   return (

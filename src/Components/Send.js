@@ -135,6 +135,7 @@ function Send({ walletAddress, balance }) {
             {error && <p style={{ color: "red" }}>{error}</p>}
           </div>
         </div>
+        {txHash &&( <p>Transaction Hash:{txHash}</p>)}
       </div>
 
       {/* Password Modal */}

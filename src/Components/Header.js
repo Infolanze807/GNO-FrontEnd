@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { FaRegCopy } from "react-icons/fa6";
+import copy from "copy-to-clipboard";
 
 const Header = ({ handleMenu }) => {
   const [walletAddress, setWalletAddress] = useState('');
@@ -21,11 +22,8 @@ const Header = ({ handleMenu }) => {
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(walletAddress).then(() => {
-      alert('Wallet address copied to clipboard!');
-    }).catch(err => {
-      console.error('Could not copy text: ', err);
-    });
+    copy(walletAddress)
+    alert("copied..!")
   };
 
   return (
