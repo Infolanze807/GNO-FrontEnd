@@ -13,7 +13,7 @@ function Success() {
   }
   return (
     <>
-    <div className=" text-white flex flex-col items-center h-[75h] md:h-[90vh] lg:h-[90vh] xl:h-[90vh] justify-center">
+    <div className=" text-white flex flex-col items-center h-[75vh] md:h-[90vh] lg:h-[90vh] xl:h-[90vh] justify-center">
     <img
           src={logo}
           className="mb-5 h-[90px] w-[100px] shadow-custom"
