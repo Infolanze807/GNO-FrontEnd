@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     require('preline/plugin'),
-    require('flowbite/plugin'),
+    // require('flowbite/plugin'),
   ],
 }
 
