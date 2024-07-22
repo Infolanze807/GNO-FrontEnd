@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../Images/gno-wallet-removebg-preview.png"
 
 const Header = () => {
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const login = () => {
     navigate("/sign-up");
   };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  }
   return (
     <div>
       <nav className="bg-[--bg-color] dark:bg-gray-900 fixe w-full z-20 top-0 start-0 border-b border-gray-700 dark:border-gray-600">
@@ -39,7 +48,8 @@ const Header = () => {
               type="button"
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-sticky"
-              aria-expanded="false"
+              aria-expanded={isMenuOpen}
+              onClick={toggleMenu}
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -60,13 +70,14 @@ const Header = () => {
             </button>
           </div>
           <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            className={`items-center justify-between ${isMenuOpen ? "block" : "hidden"} absolute md:relative top-14 md:top-0 left-0 w-full md:flex md:w-auto md:order-1`}
             id="navbar-sticky"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-normal  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-normal  rounded-lg bg-[--bg-color] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
               <li>
                 <NavLink
                   to={"/"}
+                  onClick={closeMenu}
                   className={({ isActive }) => isActive ? "block py-2 px-3 text-[--main-color] md:p-0" : "block py-2 px-3 text-white md:p-0" }
                   aria-current="page"
                 >
@@ -76,6 +87,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to={"/about-us"}
+                  onClick={closeMenu}
                   className={({ isActive }) => isActive ? "block py-2 px-3 text-[--main-color] md:p-0" : "block py-2 px-3 text-white md:p-0" }
                 >
                   About
@@ -87,6 +99,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to={"/contact-us"}
+                  onClick={closeMenu}
                   className={({ isActive }) => isActive ? "block py-2 px-3 text-[--main-color] md:p-0" : "block py-2 px-3 text-white md:p-0" }
                 >
                   Contact
