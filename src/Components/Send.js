@@ -31,9 +31,9 @@ function Send({ walletAddress, balance }) {
       );
       console.log(decryptedPrivateKey);
       setPrivateKey(decryptedPrivateKey);
-      await sendTransaction(values);
       setError(null);
       setShowPasswordModal(false); // Close modal on success
+      await sendTransaction(values, decryptedPrivateKey);
     } catch (error) {
       setError("Error fetching or decrypting private key. Please try again.");
     } finally {
@@ -41,7 +41,7 @@ function Send({ walletAddress, balance }) {
     }
   };
 
-  const sendTransaction = async (values) => {
+  const sendTransaction = async (values, privateKey) => {
     if (!values.walletAddress || !values.amount || !privateKey) {
       setIsLoading(false);
       return;
@@ -111,11 +111,13 @@ function Send({ walletAddress, balance }) {
     setShowPasswordModal(!showPasswordModal);
     setPassword("");
   };
+  
   const copyToclipboard = () => {
     copy(txHash);
     alert("Copied..!")
     setTxHash("");
   }
+  
   return (
     <>
       <div className="text-white flex flex-col mt-10">

@@ -12,6 +12,7 @@ import Dashboard from './Components/Dashboard';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import NewPassword from './Components/NewPassword';
 
 function App() {
   const [walletAddress, setWalletAddress] = useState("");
@@ -34,7 +35,7 @@ function App() {
         <Route path='/login' element={<Login setFunctionData={setFunctionData} />}/>
         <Route path='/importWallet' element={<ImportWallet/>}/>
         <Route path='/dash' element={<Dashboard/>}/>
-
+        <Route path='/new-password' element={<NewPassword/>}/>
       </Routes>
       </BrowserRouter> 
   );
