@@ -647,3 +647,638 @@ import React, { useState,useEffect } from "react";
 // };
 
 // export default Navbar;
+
+// import React, { useState } from 'react';
+// import { FiEyeOff, FiEye } from "react-icons/fi";
+// import { useFormik } from "formik";
+// import * as Yup from "yup";
+// import { useNavigate } from 'react-router-dom';
+// import logo from '../Images/gno-wallet.png';
+// import axios from 'axios';
+
+// function Login({ setFunctionData }) {
+//   const [passwordVisible, setPasswordVisible] = useState(false);
+//   const navigate = useNavigate();
+//   const [error, setError] = useState(null);
+
+//   const formik = useFormik({
+//     initialValues: {
+//       password: "",
+//     },
+//     validationSchema: Yup.object({
+//       password: Yup.string().required("Required"),
+//     }),
+//   //   onSubmit: async (values) => {
+//   //     try {
+//   //      const WalletData = localStorage.getItem("Wallet Data:");
+//   //      const FetchWalletData = JSON.parse(WalletData);
+//   //      const address = FetchWalletData.Wallet_address;
+//   //       const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/${address}/${values.password}`);
+//   //       console.log(response);
+//   //       if (response.data && response.data.success) {
+//   //         console.log(response.data.address);
+//   //         setFunctionData(response.data.address);
+//   //         navigate("/main");
+//   //       } else {
+//   //         setError("Invalid address or password. Please try again.");
+//   //       }
+//   //     } catch (error) {
+//   //       setError("Invalid address or password. Please try again.");
+//   //     }
+//   //   },
+//   // });
+//   onSubmit: async (values) => {
+//     try {
+//       const WalletData = localStorage.getItem("Wallet Data:");
+//       const FetchWalletData = JSON.parse(WalletData);
+//       const address = FetchWalletData.Wallet_address;
+//       const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/${address}/${values.password}`);
+      
+//       if (response.data && response.data.success) {
+//         console.log(response.data.address);
+//         setFunctionData(response.data.address);
+//         navigate("/main");
+//       } else {
+//         setError("Invalid address or password. Please try again.");
+//       }
+//     } catch (error) {
+//       if (error.response) {
+//         // The request was made and the server responded with a status code that falls out of the range of 2xx
+//         setError(`Error: ${error.response.data.message || "Invalid address or password. Please try again."}`);
+//       } else if (error.request) {
+//         // The request was made but no response was received
+//         setError("Network error: Unable to reach the backend. Please check your internet connection or try again later.");
+//       } else {
+//         // Something happened in setting up the request that triggered an Error
+//         setError("An unexpected error occurred. Please try again.");
+//       }
+//       console.error("Error during authentication:", error);
+//     }
+//   },
+// });
+
+//   const togglePasswordVisibility = () => {
+//     setPasswordVisible((prevState) => !prevState);
+//   };
+
+//   return (
+//     <>
+//       <div className="text-white flex flex-col items-center h-[100vh] md:h-[90vh] lg:h-[90vh] xl:h-[90vh] justify-center">
+//         <img src={logo} className="mb-5 h-[100px] w-[90px] shadow-custom" />
+//         <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-10 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[350px] xl:w-[350px]">
+//           <div className="text-center w-full">
+//             <p className="text-lg">Secure and trusted multi-chain crypto wallet</p>
+//           </div>
+//           <form onSubmit={formik.handleSubmit} className="w-full">
+//             <div className="w-full relative mt-4">
+//               {passwordVisible ? (
+//                 <FiEye onClick={togglePasswordVisibility} className="absolute top-9 right-2" />
+//               ) : (
+//                 <FiEyeOff onClick={togglePasswordVisibility} className="absolute top-9 right-2" />
+//               )}
+//               <label className="text-base">Password</label>
+//               <input
+//                 type={passwordVisible ? "text" : "password"}
+//                 name="password"
+//                 className="bg-[--border-color] w-full h-[40px] px-2 focus:outline-[--green-color] outline-none"
+//                 id="password"
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//                 value={formik.values.password}
+//               />
+//               {formik.touched.password && formik.errors.password ? (
+//                 <div className="text-red-500">{formik.errors.password}</div>
+//               ) : null}
+//             </div>
+//             {/* <div className="w-full my-4">
+//               <button type="submit" className="bg-[--green-color] text-white text-base w-full rounded-full p-2 mt-4">
+//                 Unblock
+//               </button>
+//               {error && <p style={{ color: "red" }}>{error}</p>}
+//             </div> */}
+//             <div className="grid grid-cols-2 w-full mt-4">
+//               <div>
+//                 <button className="text-[--green-color] text-base w-full p-2" onClick={() => navigate(-1)}>
+//                   Back
+//                 </button>
+//               </div>
+//               <div>
+//                 <button
+//                   className="bg-[--green-color] text-white text-base w-full rounded-full p-2"
+//                   type="submit"
+//                 >
+//                   Unlock
+//                 </button>
+//               </div>
+//             </div>
+//             {error && <p style={{ color: "red" }}>{error}</p>}
+//           </form>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default Login;
+
+// import React, { useState } from 'react';
+// import { PiEyeFill, PiEyeSlashFill } from "react-icons/pi";
+// import { FaSpinner } from "react-icons/fa"; // Import spinner icon
+// import { useFormik } from "formik";
+// import * as Yup from "yup";
+// import { useNavigate } from 'react-router-dom';
+// import logo from '../Images/gno-wallet.png';
+// import axios from 'axios';
+
+// function Login({ setFunctionData }) {
+//   const [passwordVisible, setPasswordVisible] = useState(false);
+//   const [isLoading, setIsLoading] = useState(false); // State for loading
+//   const navigate = useNavigate();
+//   const [error, setError] = useState(null);
+
+//   const formik = useFormik({
+//     initialValues: {
+//       password: "",
+//     },
+//     validationSchema: Yup.object({
+//       password: Yup.string().required("Required"),
+//     }),
+//     onSubmit: async (values) => {
+//       try {
+//         setIsLoading(true); // Start loading
+//         const WalletData = localStorage.getItem("Wallet Data:");
+//         const FetchWalletData = JSON.parse(WalletData);
+//         const address = FetchWalletData.Wallet_address;
+//         const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/${address}/${values.password}`);
+        
+//         if (response.data && response.data.success) {
+//           console.log(response.data.address);
+//           setFunctionData(response.data.address);
+//           navigate("/main");
+//         } else {
+//           setError("Invalid address or password. Please try again.");
+//         }
+//       } catch (error) {
+//         if (error.response) {
+//           setError(`Error: ${error.response.data.message || "Invalid address or password. Please try again."}`);
+//         } else if (error.request) {
+//           setError("Network error: Unable to reach the backend. Please check your internet connection or try again later.");
+//         } else {
+//           setError("An unexpected error occurred. Please try again.");
+//         }
+//         console.error("Error during authentication:", error);
+//       } finally {
+//         setIsLoading(false); // Stop loading
+//       }
+//     },
+//   });
+
+//   const togglePasswordVisibility = () => {
+//     setPasswordVisible((prevState) => !prevState);
+//   };
+
+//   return (
+//     <>
+//       <div className="text-white flex flex-col items-center h-[80vh] md:h-[90vh] lg:h-[90vh] xl:h-[90vh] justify-center">
+//         <img src={logo} className="mb-5 h-[90px] w-[100px] shadow-custom" />
+//         <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-4 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[350px] xl:w-[350px]">
+//           <div className="text-center w-full">
+//             <p className="text-base">Secure and trusted crypto wallet</p>
+//           </div>
+//           <form onSubmit={formik.handleSubmit} className="w-full">
+//             <div className="w-full relative py-4">
+//               {passwordVisible ? (
+//                 <PiEyeFill onClick={togglePasswordVisibility} className="absolute top-[52px] right-2 text-[--green-color] font-bold cursor-pointer" />
+//               ) : (
+//                 <PiEyeSlashFill onClick={togglePasswordVisibility} className="absolute top-[52px] right-2 text-[--green-color] font-bold cursor-pointer" />
+//               )}
+//               <label className="text-sm text-[--green-color]">Password:</label>
+//               <input
+//                 type={passwordVisible ? "text" : "password"}
+//                 name="password"
+//                 className="bg-[--border-color] w-full h-[40px] rounded-sm px-2 focus:outline-[--green-color] b"
+//                 id="password"
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//                 value={formik.values.password}
+//               />
+//               {formik.touched.password && formik.errors.password ? (
+//                 <div className="text-red-500">{formik.errors.password}</div>
+//               ) : null}
+//             </div>
+//             <div className="grid grid-cols-2 w-full py-2">
+//               <div>
+//                 <button className="text-[--green-color] text-base w-full p-2" onClick={() => navigate(-1)}>
+//                   Back
+//                 </button>
+//               </div>
+//               <div>
+//                 <button
+//                   className="bg-[--green-color] text-white text-base w-full rounded-full p-2 flex items-center justify-center"
+//                   type="submit"
+//                   disabled={isLoading} // Disable button while loading
+//                 >
+//                   {isLoading ? <FaSpinner className="animate-spin mr-2" /> : "Unlock"} {/* Show loader or text */}
+//                 </button>
+//               </div>
+//             </div>
+//             {error && <p className='text-red-600 w-full pt-2 text-xs text-center'>{error}</p>}
+//           </form>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default Login;
+// import React, { useState } from 'react';
+// import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+// import SetPassword from './Components/SetPassword';
+// import ValidatePassphrase from './Components/ValidatePassphrase';
+// import WalletCreated from './Components/WalletCreated';
+// import Welcome from './Components/Welcome';
+// import Main from './Components/Main';
+// import Success from './Components/Success';
+// import Login from './Components/Login';
+// import ImportWallet from './Components/ImportWallet';
+// import Dashboard from './Components/Dashboard';
+// import Home from './Pages/Home';
+// import About from './Pages/About';
+// import Contact from './Pages/Contact';
+// import NewPassword from './Components/NewPassword';
+
+// function App() {
+//   const [walletAddress, setWalletAddress] = useState("");
+//   const setFunctionData = (Address) => {
+//        setWalletAddress(Address)
+
+//   }
+//   return (
+//  <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/sign-up" element={<Welcome />} />
+//         <Route path="/about-us" element={<About />} />
+//         <Route path="/contact-us" element={<Contact />} />
+//         <Route path="/set-password" element={<SetPassword />} />
+//         <Route path="/validate-passphrase" element={<ValidatePassphrase />} />
+//         <Route path="/wallet-created" element={<WalletCreated />} />
+//         <Route path="/success" element={<Success />} />
+//         <Route path='/main' element={<Main walletAddress = {walletAddress}/>}/>
+//         <Route path='/login' element={<Login setFunctionData={setFunctionData} />}/>
+//         <Route path='/importWallet' element={<ImportWallet/>}/>
+//         <Route path='/dash' element={<Dashboard/>}/>
+//         <Route path='/new-password' element={<NewPassword/>}/>
+//       </Routes>
+//       </BrowserRouter> 
+//   );
+// }
+
+// export default App;
+// import React, { useState } from "react";
+// import { useFormik } from "formik";
+// import * as Yup from "yup";
+// import { useNavigate } from "react-router-dom";
+// import Web3 from "web3";
+// import axios from "axios";
+// import { getWeb3 } from "../Utils/Rpc";
+// import { decryptPrivateKey } from "../Utils/Crypto";
+// import { FaSpinner } from "react-icons/fa";
+// import copy from "copy-to-clipboard";
+
+// function Send({ walletAddress, balance }) {
+//   const navigate = useNavigate();
+//   const [privateKey, setPrivateKey] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [error, setError] = useState(null);
+//   const [txHash, setTxHash] = useState("");
+//   const [showPasswordModal, setShowPasswordModal] = useState(false);
+//   const [isLoading, setIsLoading] = useState(false);
+
+//   const fetchPrivateKey = async (values) => {
+//     setIsLoading(true);
+//     try {
+//       const response = await axios.get(
+//         `${process.env.REACT_APP_BACKEND}/wallet/${walletAddress}/${password}`
+//       );
+//       const encryptedPrivateKey = response.data.encryptedPrivateKey;
+//       const decryptedPrivateKey = decryptPrivateKey(
+//         encryptedPrivateKey,
+//         password
+//       );
+//       console.log(decryptedPrivateKey);
+//       setPrivateKey(decryptedPrivateKey);
+//       setError(null);
+//       setShowPasswordModal(false); // Close modal on success
+//       await sendTransaction(values, decryptedPrivateKey);
+//     } catch (error) {
+//       setError("Error fetching or decrypting private key. Please try again.");
+//     } finally {
+//       setIsLoading(false);
+//     }
+//   };
+
+//   const sendTransaction = async (values, privateKey) => {
+//     if (!values.walletAddress || !values.amount || !privateKey) {
+//       setIsLoading(false);
+//       return;
+//     }
+
+//     try {
+//       const web3 = getWeb3(); // Ensure getWeb3 is a function and invoke it
+//       const amountWei = web3.utils.toWei(values.amount, "ether");
+
+//       const nonce = await web3.eth.getTransactionCount(walletAddress, "latest");
+//       const gasPrice = await web3.eth.getGasPrice();
+//       const gasLimit = 21000; // Basic transaction gas limit
+
+//       const tx = {
+//         from: walletAddress,
+//         to: values.walletAddress,
+//         value: amountWei,
+//         gas: gasLimit,
+//         gasPrice: gasPrice,
+//         nonce: nonce,
+//       };
+
+//       // Sign transaction with private key
+//       const signedTx = await web3.eth.accounts.signTransaction(tx, privateKey);
+
+//       // Send signed transaction
+//       const txHash = await web3.eth.sendSignedTransaction(
+//         signedTx.rawTransaction
+//       );
+//       console.log("Transaction sent. TxHash:", txHash);
+//       setTxHash(txHash.transactionHash);
+
+//       alert("Transaction sent successfully!");
+//       formik.resetForm();
+//       setPassword(""); 
+//     } catch (error) {
+//       console.error("Failed to send transaction:", error);
+//       alert("Failed to send transaction.");
+//     } finally {
+//       setIsLoading(false);
+//     }
+//   };
+
+//   const formik = useFormik({
+//     initialValues: {
+//       walletAddress: "",
+//       amount: "",
+//     },
+//     validationSchema: Yup.object({
+//       walletAddress: Yup.string().required("Required"),
+//       amount: Yup.number()
+//         .required("Required")
+//         .test("is-sufficient", "Insufficient balance", function (value) {
+//           return parseFloat(value) <= parseFloat(balance);
+//         }),
+//     }),
+//     onSubmit: (values) => {
+//       setShowPasswordModal(true); 
+//     },
+//   });
+
+//   const handleSendClick = () => {
+//     fetchPrivateKey(formik.values);
+//   };
+
+//   const togglePasswordModal = () => {
+//     setShowPasswordModal(!showPasswordModal);
+//     setPassword("");
+//   };
+  
+//   const copyToclipboard = () => {
+//     copy(txHash);
+//     alert("Copied..!")
+//     setTxHash("");
+//   }
+  
+//   return (
+//     <>
+//       <div className="text-white flex flex-col mt-10">
+//         <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-5 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[400px] xl:w-[450px]">
+//           <div className="w-full">
+//             <h1>Send Transaction</h1>
+//             <form onSubmit={formik.handleSubmit}>
+//               <div>
+//                 <input
+//                   type="text"
+//                   placeholder="Recipient Wallet Address"
+//                   className="bg-[--input-color] w-full h-[40px] px-2 rounded-sm focus:outline-[--green-color] b"
+//                   id="walletAddress"
+//                   onChange={formik.handleChange}
+//                   onBlur={formik.handleBlur}
+//                   value={formik.values.walletAddress}
+//                 />
+//                 {formik.touched.walletAddress && formik.errors.walletAddress ? (
+//                   <div className="text-red-500">
+//                     {formik.errors.walletAddress}
+//                   </div>
+//                 ) : null}
+//               </div>
+//               <div className="w-full mt-4">
+//                 <input
+//                   type="text"
+//                   placeholder="Amount (in ETH)"
+//                   className="bg-[--input-color] w-full h-[40px] px-2 rounded-sm focus:outline-[--green-color] b"
+//                   id="amount"
+//                   onChange={formik.handleChange}
+//                   onBlur={formik.handleBlur}
+//                   value={formik.values.amount}
+//                 />
+//                 {formik.touched.amount && formik.errors.amount ? (
+//                   <div className="text-red-500">{formik.errors.amount}</div>
+//                 ) : null}
+//               </div>
+//               {error && <p style={{ color: "red" }}>{error}</p>}
+//               <button
+//                 type="submit"
+//                 className="bg-[--green-color] text-white text-base w-full rounded-full p-2 mt-4 flex items-center justify-center"
+//                 disabled={isLoading}
+//               >
+//                 {isLoading ? (
+//                   <FaSpinner className="animate-spin mr-2" />
+//                 ) : (
+//                   "Send Transaction"
+//                 )}
+//               </button>
+//             </form>
+//             {txHash && (<div className="mt-3 p-2 rounded-lg bg-white text-black border border-[--border-color]">
+//               <p onClick={copyToclipboard} className="truncate text-sm hover:underline cursor-pointer">Transaction Hash:<br/>{txHash}</p>
+//             </div>)}
+//           </div>
+//         </div>
+//       </div>
+
+//       {showPasswordModal && (
+//         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+//           <div className="bg-[--bg-color] text-black h-[230px] w-[320px] p-4 rounded-lg border border-[--green-color]">
+//             <div className="pb-5">
+//               <p className="text-sm text-white">
+//                 Please Enter Your Password To Perform This Transaction
+//               </p>
+//             </div>
+//             <div>
+//               <label className="text-[--green-color]">Password:</label>
+//               <input
+//                 type="password"
+//                 placeholder="Password"
+//                 className="bg-[--input-color] w-full h-[40px] px-2 rounded-sm focus:outline-white b mt-2"
+//                 id="password"
+//                 value={password}
+//                 onChange={(e) => setPassword(e.target.value)}
+//               />
+//               <div className="grid grid-cols-2 gap-5 mt-6">
+//                 <button
+//                   type="button"
+//                   className="bg-[--green-color] p-1 rounded-lg flex items-center justify-center"
+//                   onClick={handleSendClick}
+//                   disabled={isLoading}
+//                 >
+//                   {isLoading ? (
+//                     <FaSpinner className="animate-spin mr-2" />
+//                   ) : (
+//                     "Send"
+//                   )}
+//                 </button>
+//                 <button
+//                   type="button"
+//                   className="bg-red-600 rounded-lg"
+//                   onClick={togglePasswordModal}
+//                 >
+//                   Cancel
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// }
+
+// export default Send;
+// import React, { useEffect, useState } from 'react';
+// import Header from './Header';
+// import Navbar from './Navbar';
+// import { getWeb3 } from '../Utils/Rpc';
+
+// function Dashboard({ walletAddress }) {
+//   useEffect(() => {
+//     const fetchBalance = async () => {
+//       if (!walletAddress) return;
+
+//       try {
+//         const web3 = getWeb3();
+//         const balanceInWei = await web3.eth.getBalance(walletAddress);
+//         const balanceInEth = web3.utils.fromWei(balanceInWei, 'ether');
+//         setBalance(balanceInEth);
+//       } catch (error) {
+//         console.error("Error fetching balance:", error);
+//       }
+//     };
+
+//     fetchBalance();
+//   }, [walletAddress]);
+
+//   const [navbar, setNavbar] = useState(false);
+//   const [balance, setBalance] = useState(null);
+//   const [transactions, setTransactions] = useState([]);
+
+//   const handleMenu = () => {
+//     setNavbar((prev) => !prev);
+//   };
+
+//   // Mock data for transactions
+//   useEffect(() => {
+//     // Example of setting mock transactions
+//     const mockTransactions = [
+//       {
+//         number: 1,
+//         hash: '0x123abc...',
+//         from: '0xabc123...',
+//         to: '0xdef456...',
+//         amount: '1.5 xDAI',
+//       },
+//       {
+//         number: 2,
+//         hash: '0x456def...',
+//         from: '0xdef456...',
+//         to: '0xabc123...',
+//         amount: '0.75 xDAI',
+//       },
+//       {
+//         number: 1,
+//         hash: '0x123abc...',
+//         from: '0xabc123...',
+//         to: '0xdef456...',
+//         amount: '1.5 xDAI',
+//       },
+//       {
+//         number: 1,
+//         hash: '0x123abc...',
+//         from: '0xabc123...',
+//         to: '0xdef456...',
+//         amount: '1.5 xDAI',
+//       },
+      
+
+
+      
+//       // Add more transactions as needed
+//     ];
+
+//     setTransactions(mockTransactions); // Set your actual transaction data here
+//   }, []);
+
+//   return (
+//     <>
+//       <Header handleMenu={handleMenu} walletAddress={walletAddress} />
+//       <Navbar isOpen={navbar} handleMenu={handleMenu} />
+//       <div className='mx-3 md:mx-5 lg:mx-8 mt-10'>
+//         <h1 className='text-[--green-color] font-bold text-3xl text-center'>$10</h1>
+//       </div>
+//       <div className='mx-3 md:mx-5 lg:mx-8 mt-10'>
+//         <h1 className='text-white font-bold text-3xl text-center'>Transaction History</h1>
+//       </div>
+//       <div className='mx-3 md:mx-5 lg:mx-8 bg-white mt-10 p-3 text-center rounded-lg overflow-y-auto'>
+//         <table className='w-full'>
+//           <thead className="bg-[--green-color] text-white">
+//             <tr>
+//               <th scope="col" className="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+//                 No.
+//               </th>
+//               <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+//                 Transaction Hash
+//               </th>
+//               <th scope="col" className="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+//                 From
+//               </th>
+//               <th scope="col" className="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+//                 To
+//               </th>
+//               <th scope="col" className="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+//                 Amount
+//               </th>
+//             </tr>
+//           </thead>
+//           <tbody>
+//           {transactions.map((transaction) => (
+//               <tr key={transaction.hash}>
+//                 <td className="px-6 py-4 whitespace-nowrap text-left border-b-2">{transaction.number}</td>
+//                 <td className="px-6 py-4 whitespace-nowrap text-left border-b-2">{transaction.hash}</td>
+//                 <td className="px-6 py-4 whitespace-nowrap text-left border-b-2">{transaction.from}</td>
+//                 <td className="px-6 py-4 whitespace-nowrap text-left border-b-2">{transaction.to}</td>
+//                 <td className="px-6 py-4 whitespace-nowrap text-left border-b-2">{transaction.amount}</td>
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default Dashboard;
