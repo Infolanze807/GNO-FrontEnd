@@ -101,13 +101,15 @@ const Navbar = ({ isOpen, handleMenu, handleSignOut }) => {
           </button>
           <nav className="bg-[--bg-color] border-4 border-[--border-color] text-white p-4 h-full pt-8">
             <ul className="flex flex-col">
+            <Link to={'/main'}>
               <li className="flex items-center justify-between py-3 border-b-2 border-b-[#2e3035]">
                 <div className="flex items-center">
                   <FaWallet className="mr-2" />
-                  Manage Wallets
+                  BAck To Home
                 </div>
                 <FaAngleRight />
               </li>
+              </Link>
               <li className="flex items-center justify-between py-3 border-b-2 border-b-[#2e3035]">
                 <div className="flex items-center">
                   <FaLink className="mr-2" />
