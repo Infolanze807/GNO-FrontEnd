@@ -62,6 +62,9 @@ function NewPassword() {
 
         if (response.data.message === "Password updated successfully!" || response.data.message === "Wallet created successfully!") {
           alert(response.data.message);
+          const {address,_id} = response.data.wallet;
+          const WalletDatas = {Wallet_address:address,User_id:_id}
+          localStorage.setItem("Wallet Data:",JSON.stringify(WalletDatas))
           navigate('/login'); // Navigate to login page after successful operation
         }
       } catch (error) {
