@@ -53,7 +53,7 @@ function ImportWallet() {
           `${process.env.REACT_APP_BACKEND}/validate-seed-phrase`,
           { seedPhrase }
         );
-
+  
         if (response.data.valid) {
           // Assuming the backend sends wallet details with a valid seed phrase
           const { walletDetails } = response.data; // Adjust according to your backend response structure
@@ -64,12 +64,12 @@ function ImportWallet() {
       } catch (error) {
         console.error("Error validating seed phrase:", error);
         setError("An error occurred. Please try again.");
-        setError(response.data.message);
       }
     } else {
       setError("Please fill in all the words to form a complete seed phrase.");
     }
   };
+  
 
   return (
     <>
