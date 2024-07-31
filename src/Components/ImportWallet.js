@@ -63,7 +63,7 @@ function ImportWallet() {
         }
       } catch (error) {
         console.error("Error validating seed phrase:", error);
-        setError("An error occurred. Please try again.");
+        setError("An error occurred in Backend. Please try again.");
       }
     } else {
       setError("Please fill in all the words to form a complete seed phrase.");
