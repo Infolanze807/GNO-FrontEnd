@@ -198,6 +198,7 @@
 import React, { useState } from "react";
 import { FaCheckCircle, FaRegCircle } from "react-icons/fa";
 import { PiEyeFill, PiEyeSlashFill } from "react-icons/pi";
+import { FaSpinner } from "react-icons/fa";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import logo from '../Images/gno-wallet.png';
@@ -209,6 +210,7 @@ import { encryptPrivateKey } from "../Utils/Crypto";
 function NewPassword() {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [validations, setValidations] = useState({
     length: false,
     upperCase: false,
@@ -243,6 +245,7 @@ function NewPassword() {
     onSubmit: async (values) => {
       try {
         // Extract private key from seed phrase
+        setIsLoading(true);
         const wallet = ethers.Wallet.fromPhrase(seedPhrase);
         const address = wallet.address;
         const privateKey = wallet.privateKey;
@@ -267,6 +270,7 @@ function NewPassword() {
       } catch (error) {
         console.error('Error setting password:', error);
       }
+      setIsLoading(false);
     },
   });
 
@@ -376,10 +380,10 @@ function NewPassword() {
             </div>
             <button
               type="submit"
-              disabled={!isFormValid()}
+              disabled={isLoading}
               className={`w-full mt-5 py-2 rounded-sm ${isFormValid() ? 'bg-green-500' : 'bg-gray-300'} text-white`}
             >
-              Create Wallet
+              {isLoading ? <FaSpinner className="animate-spin mr-2" /> : "Set Password"}
             </button>
           </form>
         </div>
