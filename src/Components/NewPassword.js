@@ -20,7 +20,7 @@ function NewPassword() {
   });
   const navigate = useNavigate();
   const location = useLocation();
-  const { seedPhrase } = location.state;
+  const { seedPhrase,walletDetails } = location.state;
 
   const validatePassword = (password) => {
     setValidations({

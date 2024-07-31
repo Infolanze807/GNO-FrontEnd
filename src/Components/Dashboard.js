@@ -51,7 +51,7 @@ function Dashboard({ address }) {
     const fetchTransactions = async () => {
       console.log("d", walletAddress);
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/transactions/${walletAddress}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/auth/transactions/${walletAddress}`);
         console.log("hello", response);
         setTransactions(response.data);
       } catch (error) {

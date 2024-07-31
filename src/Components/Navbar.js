@@ -153,9 +153,9 @@ const Navbar = ({ isOpen, handleMenu, handleSignOut }) => {
                 </div>
                 <FaAngleRight />
               </li></Link>
-              <li className="flex items-center justify-between py-3 border-b-2 border-b-[#2e3035]">
+              <li className="flex items-center justify-between py-3 border-b-2 border-b-[#2e3035] cursor-pointer"  onClick={handleSignOut}>
                 <div className="flex items-center">
-                  <button type="button"  onClick={handleSignOut} ><FaKey className="mr-2 cursor-pointer" /></button>
+                  <button type="button"><FaKey className="mr-2" /></button>
                   Lock Wallet
                 </div>
                 <FaAngleRight />
