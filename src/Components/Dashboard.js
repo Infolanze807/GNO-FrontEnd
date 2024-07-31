@@ -83,8 +83,8 @@ function Dashboard({ address }) {
         <h1 className='text-white font-bold text-3xl text-center'>Transaction History</h1>
       </div>
       <div className="flex items-center justify-center">
-      <div className='mx-3 md:mx-5 lg:mx-8 bg-white mt-10 p-3 text-center rounded-lg overflow-y-auto w-[460px] sm:w-[620px] md:w-[650px] lg:w-[800px] xl:w-[830px] h-[300px] '>
-        <table className='w-full h-full'>
+      <div className='mx-3 md:mx-5 lg:mx-8 bg-white mt-10 p-3 text-center rounded-lg overflow-y-auto w-[460px] sm:w-[620px] md:w-[650px] lg:w-[800px] xl:w-[830px]'>
+        <table className='w-full'>
           <thead className="bg-[--green-color] text-white">
             <tr>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
