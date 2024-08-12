@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import logo from "../Images/gno-wallet-removebg-preview.png"
+import logo from "../Images/gno-wallet.jpeg"
 
 const Header = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Header = () => {
   }
   return (
     <div>
-      <nav className="bg-[--bg-color] dark:bg-gray-900 fixe w-full z-20 top-0 start-0 border-b border-gray-700 dark:border-gray-600">
+      <nav className="bg-zinc-800 fixed w-full z-20 top-0 start-0 border-b border-gray-700 dark:border-gray-600">
         <div className="flex flex-wrap items-center justify-between mx-auto p-2 lg:p-3 md:p-3 lg:px-10 md:px-10 px-4">
           <a
             href="/"
@@ -27,11 +27,11 @@ const Header = () => {
           >
             <img
               src={logo}
-              className="w-12"
+              className="w-14 rounded-full"
               alt="Flowbite Logo"
             />
             <span className="self-center text-3xl font-semibold whitespace-nowrap text-[--main-color]">
-              Gnosis
+              Reivun
             </span>
           </a>
           <div className="flex items-center gap-14">
@@ -70,7 +70,7 @@ const Header = () => {
             </button>
           </div>
           <div
-            className={`items-center justify-between ${isMenuOpen ? "block" : "hidden"} absolute md:relative top-14 md:top-0 left-0 w-full md:flex md:w-auto md:order-1`}
+            className={`items-center justify-between ${isMenuOpen ? "block bg-gray-900" : "hidden"} absolute md:relative top-16 md:top-0 left-0 w-full md:flex md:w-auto md:order-1`}
             id="navbar-sticky"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-normal  rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">

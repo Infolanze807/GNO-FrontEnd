@@ -17,6 +17,8 @@ import Contact from './Pages/Contact';
 import NewPassword from './Components/NewPassword';
 import {AuthProvider} from './Utils/AuthProvider';
 import PrivateRoutes from "./Utils/PrivateRoutes.js";
+import Terms from "./Pages/Terms.js"; 
+import Policy from "./Pages/Policy.js";
 
 function App() {
   const [walletAddress, setWalletAddress] = useState("");
@@ -45,8 +47,11 @@ function App() {
         <Route path='/importWallet' element={<ImportWallet/>}/>
         <Route path='/dash' element={<Dashboard />}/>
         <Route path='/new-password' element={<NewPassword/>}/>
+        <Route path='/terms' element={<Terms/>}/>
+        <Route path='/policy' element={<Policy/>}/>
       </Routes>
       </AuthProvider>
+      
       </BrowserRouter> 
   );
 }

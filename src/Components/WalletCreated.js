@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { decryptPrivateKey } from "../Utils/Crypto"; // Adjust path as per your project structure
-import logo from "../Images/gno-wallet.png";
+import logo from "../Images/gno-wallet.jpeg";
 
 function WalletCreated() {
   const [walletData, setWalletData] = useState(null);

@@ -1,7 +1,7 @@
 import React from 'react'
 import {  useNavigate } from 'react-router-dom';
 import { FaCheckCircle } from "react-icons/fa";
-import logo from '../Images/gno-wallet.png'
+import logo from '../Images/gno-wallet.jpeg'
 
 
 function Success() {

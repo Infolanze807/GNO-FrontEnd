@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Images/gno-wallet-removebg-preview.png";
+import logo from "../Images/gno-wallet.jpeg"
 import {
   FaFacebookF,
   FaGithub,
@@ -8,6 +8,7 @@ import {
   FaTelegramPlane,
 } from "react-icons/fa";
 import Certificate from "../Images/image.8354ab2c.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,10 +16,10 @@ const Footer = () => {
       <div className="grid lg:grid-cols-10 md:grid-cols-1 grid-cols-1 items-center gap-5 py-10">
         <div className="lg:col-span-2">
           <div className="text-4xl text-[--main-color] text-center font-bold uppercase">
-            Gnosis
+            Reivun
           </div>
           <div className="pt-3">
-            <img className="mx-auto w-40" src={logo} alt="Gnosis" />
+            <img className="mx-auto w-40 rounded-full" src={logo} alt="Gnosis" />
           </div>
         </div>
         <div className="lg:col-span-6">
@@ -70,12 +71,16 @@ const Footer = () => {
               <p className="text-sm pb-1 hover:text-[--main-color] hover: cursor-pointer transition-all duration-300">
                 About Us
               </p>
+              <Link to={'/terms'}>
               <p className="text-sm pb-1 hover:text-[--main-color] hover: cursor-pointer transition-all duration-300">
                 Terms & Conditions
               </p>
+              </Link>
+              <Link to={'/policy'}>
               <p className="text-sm pb-1 hover:text-[--main-color] hover: cursor-pointer transition-all duration-300">
                 Privacy Policy
               </p>
+              </Link>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@
 // import { PiEyeFill, PiEyeSlashFill } from "react-icons/pi";
 // import { useFormik } from "formik";
 // import * as Yup from "yup";
-// import logo from '../Images/gno-wallet.png';
+// import logo from '../Images/gno-wallet.jpeg';
 // import { useLocation, useNavigate } from "react-router-dom";
 // import axios from 'axios';
 // import { ethers } from "ethers";
@@ -201,7 +201,7 @@ import { PiEyeFill, PiEyeSlashFill } from "react-icons/pi";
 import { FaSpinner } from "react-icons/fa";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import logo from '../Images/gno-wallet.png';
+import logo from '../Images/gno-wallet.jpeg';
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { ethers } from "ethers";

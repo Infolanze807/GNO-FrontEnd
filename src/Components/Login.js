@@ -6,7 +6,7 @@ import { FaSpinner } from "react-icons/fa"; // Import spinner icon
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from 'react-router-dom';
-import logo from '../Images/gno-wallet.png';
+import logo from '../Images/gno-wallet.jpeg';
 import axios from 'axios';
 import { useAuth } from "../Utils/AuthProvider";
 import copy from 'copy-to-clipboard';
@@ -83,7 +83,7 @@ function Login({ setFunctionData}) {
   return (
     <>
       <div className="text-white flex flex-col items-center h-[80vh] md:h-[90vh] lg:h-[90vh] xl:h-[90vh] justify-center">
-        <img src={logo} className="mb-5 h-[90px] w-[100px] shadow-custom" />
+        <img src={logo} className="mb-5 h-[100px] w-[100px] rounded-full  shadow-custom" />
         <div className="flex flex-col items-center justify-center bg-[--bg-color] border-[--border-color] border shadow-sm p-4 rounded-2xl w-[300px] sm:w-[320px] md:w-[350px] lg:w-[350px] xl:w-[400px]">
           <div className="text-center w-full">
             <p className="text-base">Secure and trusted crypto wallet</p>

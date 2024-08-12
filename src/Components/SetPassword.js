@@ -3,7 +3,7 @@
 // import { PiEyeFill, PiEyeSlashFill } from "react-icons/pi";
 // import { useFormik } from "formik";
 // import * as Yup from "yup";
-// import logo from '../Images/gno-wallet.png';
+// import logo from '../Images/gno-wallet.jpeg';
 // import { useLocation, useNavigate } from "react-router-dom";
 
 // function SetPassword() {
@@ -182,7 +182,7 @@ import { FaCheckCircle, FaRegCircle } from "react-icons/fa";
 import { PiEyeFill, PiEyeSlashFill } from "react-icons/pi";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import logo from '../Images/gno-wallet.png';
+import logo from '../Images/gno-wallet.jpeg';
 import { useLocation, useNavigate } from "react-router-dom";
 
 function SetPassword() {
