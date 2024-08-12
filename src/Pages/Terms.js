@@ -10,7 +10,7 @@ const Terms = () => {
         <section class="m-auto flex w-full max-w-screen-max+padding flex-col-reverse justify-between gap-7 rounded-[20px] bg-trustBlue px-5 py-10 tablet:flex-row tablet:items-center desktop:rounded-[30px] desktop:p-16 desktop:px-[100px] max-w-screen-max+padding">
           <div>
             <h1 class="default-transition text-trustBlack font-wixMadefor font-bold dark:text-trustWhite text-mobileH1 leading-mobileH1 tablet:text-desktopH1 tablet:leading-desktopH1 !text-trustWhite">
-              Trust Wallet <br /> Terms of Service{" "}
+              Reivun Wallet <br /> Terms of Service{" "}
             </h1>
             <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyLarge leading-mobileBodyLarge tablet:text-desktopBodyLarge tablet:leading-desktopBodyLarge mt-6 max-w-[35ch] !text-trustWhite">
               Last Updated: Aug 25, 2022
@@ -22,7 +22,7 @@ const Terms = () => {
             DApps Platform, Inc., and/or its affiliates (“we,” “our,” or “us”)
             provides its software services through its website located at
             trustwallet.com and related mobile applications and products
-            (collectively the “Services” or “Trust Wallet”). Before using our
+            (collectively the “Services” or “Reivun Wallet”). Before using our
             Services, please read the Terms of Service (the “Terms”) carefully,
             along with any other policies or notices on our website or mobile
             applications.
@@ -40,7 +40,7 @@ const Terms = () => {
             by these Terms or any updates or modifications to these Terms, you
             may not access or use our Services. WE DO NOT PROVIDE INVESTMENT OR
             FINANCIAL ADVICE OR CONSULTING SERVICES. WE ARE SOLELY THE PROVIDER
-            OF TRUST WALLET ANDWE DO NOT ADVISE OR MAKE RECOMMENDATIONS ABOUT
+            OF Reivun Wallet ANDWE DO NOT ADVISE OR MAKE RECOMMENDATIONS ABOUT
             ENGAGING IN DIGITAL ASSET TRANSACTIONS OR OPERATIONS. DECISIONS TO
             ENGAGE IN TRANSACTIONS OR PERFORM OPERATIONS INVOLVING DIGITAL
             ASSETS SHOULD BE TAKEN ON YOUR OWN ACCORD.
@@ -73,7 +73,7 @@ const Terms = () => {
             otherwise indicated. You should regularly check our website to
             inform yourself of any such changes and decide whether or not to
             accept the revised version of these Terms. If you continue to use
-            Trust Wallet following any update or modification of the Terms you
+            Reivun Wallet following any update or modification of the Terms you
             shall be deemed to have accepted the revised Terms. If you do not
             agree to the Terms or any update or modification to the Terms, you
             must cease to access or use our Services. Our Services are evolving
@@ -87,7 +87,7 @@ const Terms = () => {
             Eligibility
           </h2>
           <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
-            To be eligible to use Trust Wallet: (i) you must be at least
+            To be eligible to use Reivun Wallet: (i) you must be at least
             eighteen (18) years old and legally competent to enter into these
             Terms; (ii) you must not be a resident of sanctioned jurisdictions
             according to any trade embargoes, UN Security Council Resolutions
@@ -110,9 +110,9 @@ const Terms = () => {
             sure that these Terms are in compliance with all laws, rules, and
             regulations that apply to you. You agree that you are only using our
             Services with legally-obtained funds that rightfully belong to you.
-            By using Trust Wallet, you represent and warrant that you meet all
+            By using Reivun Wallet, you represent and warrant that you meet all
             eligibility requirements that we outline in these Terms. We may
-            still refuse to let certain people access or use Trust Wallet,
+            still refuse to let certain people access or use Reivun Wallet,
             however, and we reserve the right to change our eligibility criteria
             at any time.
           </p>
@@ -122,14 +122,14 @@ const Terms = () => {
             Services
           </h2>
           <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
-            Trust Wallet is a non-custodial wallet software, for digital assets
+            Reivun Wallet is a non-custodial wallet software, for digital assets
             such as cryptocurrencies, virtual commodities and NFTs (“Digital
             Assets”), meaning you are solely in control of and responsible for
             your Digital Assets and private keys, and accordingly you can
             authorize transactions from your wallet address. You expressly
-            acknowledge and agree that as Trust Wallet is a non-custodial wallet
+            acknowledge and agree that as Reivun Wallet is a non-custodial wallet
             software, you are solely responsible for your activity and any risk
-            of loss at all times. Trust Wallet allows you to:
+            of loss at all times. Reivun Wallet allows you to:
           </p>
           <ol class="my-4 list-disc pl-5 text-trustBlack dark:text-trustWhite ">
             <li>
@@ -166,7 +166,7 @@ const Terms = () => {
             <li>
               <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
                 broadcast Digital Asset Transaction data to various blockchains
-                supported by Trust Wallet without requiring you to download or
+                supported by Reivun Wallet without requiring you to download or
                 install the associated blockchain-based software to your local
                 device.
               </p>
@@ -210,7 +210,7 @@ const Terms = () => {
               If you access or use DApps or DEX, including, without limitation,
               DApp functionality embedded within the Services such as the
               Trade/Swap Digital Assets function, you acknowledge and agree
-              that: (i) Trust Wallet is not responsible for your access or use
+              that: (i) Reivun Wallet is not responsible for your access or use
               of DApps or DEX and shall have no liability whatsoever in
               connection with your use of DApps or DEX, including, without
               limitation, any transactions you dispute; (ii) the limits of
@@ -223,14 +223,14 @@ const Terms = () => {
               an incorrect address or problems associated with the node servers
               selected by you; (iv) when you use DApps or DEX, third-party
               developed Smart Contracts may charge you handling fees and/or
-              service fees and any information displayed on Trust Wallet
-              relating to such fees are for your reference only as Trust Wallet
+              service fees and any information displayed on Reivun Wallet
+              relating to such fees are for your reference only as Reivun Wallet
               cannot and does not guarantee its accuracy, applicability,
-              reliability, integrity or appropriateness, nor shall Trust Wallet
+              reliability, integrity or appropriateness, nor shall Reivun Wallet
               be liable for any loss or damage that may be caused directly or
-              indirectly by your use of these contents; and (v) Trust Wallet
+              indirectly by your use of these contents; and (v) Reivun Wallet
               does not currently charge any service fees or handling fees for
-              the use of DApps or DEX, however, Trust Wallet may, in its
+              the use of DApps or DEX, however, Reivun Wallet may, in its
               discretion, charge such fees at any time in the future. Any
               updated fees will apply to any transaction that occurs following
               the effective date of the updated fees.
@@ -259,18 +259,18 @@ const Terms = () => {
               Buy Digital Assets with Supported Credit or Debit Cards
             </h3>
             <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
-              If you use Trust Wallet to purchase Digital Assets with your
+              If you use Reivun Wallet to purchase Digital Assets with your
               credit or debit card, a third party will convert your chosen
               amount into the applicable Digital Asset and credit it to your
-              wallet. You acknowledge and agree that: (i) Trust Wallet is not
+              wallet. You acknowledge and agree that: (i) Reivun Wallet is not
               responsible for your use of such third party service and shall
               have no liability whatsoever in connection with your use of such
               service; (ii) you will be subject to any terms and conditions
               imposed by the relevant third party service provider; (iii) Trust
               Wallet has no ability to change, withdraw or cancel any conversion
-              requests you place; (iv) Trust Wallet is not responsible for any
+              requests you place; (iv) Reivun Wallet is not responsible for any
               exchange rates offered by the relevant third party service
-              provider(s); and (v) Trust Wallet is not responsible for any fees
+              provider(s); and (v) Reivun Wallet is not responsible for any fees
               charged by the relevant third party service provider(s) or your
               bank or credit card issuer(s).
             </p>
@@ -287,7 +287,7 @@ const Terms = () => {
               third parties, which we do not own, control, or operate. We have
               no control over the blockchain networks and, therefore, cannot and
               do not ensure that any transaction details that you submit via our
-              Services will be confirmed and processed. By using Trust Wallet,
+              Services will be confirmed and processed. By using Reivun Wallet,
               you acknowledge and agree that: (i) we do not have the ability to
               cancel or otherwise modify your transaction; (ii) the transaction
               details you submit may not be completed, or may be substantially
@@ -347,8 +347,8 @@ const Terms = () => {
               Push Notifications
             </h3>
             <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
-              You may agree to receive push notifications from Trust Wallet that
-              will alert you when blockchain networks supported by Trust Wallet
+              You may agree to receive push notifications from Reivun Wallet that
+              will alert you when blockchain networks supported by Reivun Wallet
               are congested and when transactions involving your wallet have
               been completed. If you would like to receive push notifications,
               you must opt in to the service by accessing “Settings” and
@@ -417,9 +417,9 @@ const Terms = () => {
             Party Content shared through push notifications, and will have no
             responsibility for Third Party Content including, but not limited
             to, token availability and/or sales. If, to the extent permitted by
-            Trust Wallet, you grant express permission to a third party to
-            access or connect to your Trust Wallet account, either through the
-            third party’s product or service or through Trust Wallet, you
+            Reivun Wallet, you grant express permission to a third party to
+            access or connect to your Reivun Wallet account, either through the
+            third party’s product or service or through Reivun Wallet, you
             acknowledge that granting permission to a third party to take
             specific actions on your behalf does not relieve you of any of your
             responsibilities under these Terms. You are fully responsible for
@@ -437,22 +437,22 @@ const Terms = () => {
             <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
               As long as you agree to and comply with the present Terms, we
               grant you a non-exclusive, non-sublicensable and non-transferable
-              license to use Trust Wallet for your personal use or internal
+              license to use Reivun Wallet for your personal use or internal
               business use only. Except as otherwise expressly permitted in
               these Terms, you will not: (a) reproduce, modify, adapt or create
-              derivative works of any part of Trust Wallet; (b) rent, lease,
+              derivative works of any part of Reivun Wallet; (b) rent, lease,
               distribute, sell, sublicense, transfer, or provide access to Trust
-              Wallet; (c) use Trust Wallet for the benefit of any third party;
-              (d) incorporate Trust Wallet into a product or service you provide
+              Wallet; (c) use Reivun Wallet for the benefit of any third party;
+              (d) incorporate Reivun Wallet into a product or service you provide
               to a third party without our prior written consent; (d) circumvent
-              mechanisms in Trust Wallet intended to limit your use; (f) reverse
+              mechanisms in Reivun Wallet intended to limit your use; (f) reverse
               engineer, disassemble, decompile, translate, or otherwise seek to
               obtain or derive the source code, including images and texts,
               underlying ideas, algorithms, file formats or non-public APIs to
-              Trust Wallet, except to the extent expressly permitted by
+              Reivun Wallet, except to the extent expressly permitted by
               applicable law (and then only upon advance notice to us); (g)
               remove or obscure any proprietary or other notices contained in
-              Trust Wallet (h) use Trust Wallet for competitive analysis, as
+              Reivun Wallet (h) use Reivun Wallet for competitive analysis, as
               part of any other software or project of any kind or to build
               competitive products.
             </p>
@@ -463,7 +463,7 @@ const Terms = () => {
             </h3>
             <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
               From time to time, you may choose to submit feedback to us. We
-              may, in connection with Trust Wallet, freely use, copy, disclose,
+              may, in connection with Reivun Wallet, freely use, copy, disclose,
               license, distribute and exploit any feedback in any manner without
               any obligation, royalty or restriction based on intellectual
               property rights or otherwise. No feedback will be considered your
@@ -477,8 +477,8 @@ const Terms = () => {
               Open Source
             </h3>
             <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
-              Trust Wallet was developed under a GPL open source license.
-              Information regarding Trust Wallet’s current software can be found
+              Reivun Wallet was developed under a GPL open source license.
+              Information regarding Reivun Wallet’s current software can be found
               at https://github.com/TrustWallet. Since software development is
               community-based, it can be accessed, used, and shared, in modified
               or unmodified form, by anyone. Please be aware that GPL is a
@@ -493,12 +493,12 @@ const Terms = () => {
               Content
             </h3>
             <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
-              Trust Wallet may contain copyrighted material and trademarks
+              Reivun Wallet may contain copyrighted material and trademarks
               including, but not limited to, text and graphics (the “Content”),
               which is protected by copyright law, registered and unregistered
               trademarks, and other intellectual property rights. Unless
               otherwise provided, we exclusively own the Content. Your use of
-              Trust Wallet does not grant you any right, title, or interest in
+              Reivun Wallet does not grant you any right, title, or interest in
               the Content. You agree that you will not copy, reproduce, modify,
               republish, upload, post, transmit, distribute, collect, sell,
               license, create derivative works from, or, in any other way,
@@ -517,16 +517,16 @@ const Terms = () => {
               property rights to the content associated with the NFT (“NFT
               Content”), or you are legally authorized by the owner of the
               intellectual property in the NFT Content to store the NFTs on
-              Trust Wallet. You retain all rights to the NFT Content stored or
-              Trust Wallet except for rights expressly granted herein. By using
-              Trust Wallet, you grant us a license to access, use, host, cache,
+              Reivun Wallet. You retain all rights to the NFT Content stored or
+              Reivun Wallet except for rights expressly granted herein. By using
+              Reivun Wallet, you grant us a license to access, use, host, cache,
               store, copy, reproduce, transmit, display, publish, distribute,
               adapt and modify (for technical purposes, e.g., making sure
               content is viewable on smartphones as well as computers and other
               devices) the NFT Content in any and all media or distribution
               methods (now know or later developed) solely as required to be
-              able to operate and provide services of Trust Wallet. We do not
-              monitor the NFTs and NFT Content stored on Trust Wallet for any
+              able to operate and provide services of Reivun Wallet. We do not
+              monitor the NFTs and NFT Content stored on Reivun Wallet for any
               infringement of a third party’s intellectual property rights.
               Accordingly, we assume no liability for any action regarding any
               content provided by you. You further acknowledge and agree it is
@@ -548,7 +548,7 @@ const Terms = () => {
         </section>
         <section class="w-full max-w-screen-max+padding">
           <h2 class="default-transition text-trustBlack font-wixMadefor font-bold dark:text-trustWhite text-mobileH5 leading-mobileH5 tablet:text-desktopH5 tablet:leading-desktopH5 mb-5 text-trustBlue dark:!text-trustGreen tablet:mb-4">
-            Your Use of Trust Wallet
+            Your Use of Reivun Wallet
           </h2>
           <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
             You agree that you will not violate any laws when using our
@@ -569,7 +569,7 @@ const Terms = () => {
             without authorization or use our Services in any manner that could
             interfere, disrupt, negatively affect, or inhibit other users from
             fully enjoying it; (iii) you will not distribute any virus or other
-            harmful computer code through Trust Wallet; (iv) you will not take
+            harmful computer code through Reivun Wallet; (iv) you will not take
             any action that may impose an unreasonable or disproportionately
             large load on our or any of our third party providers’
             infrastructure; (v) you will not reverse engineer or bypass,
@@ -577,15 +577,15 @@ const Terms = () => {
             may use to prevent or restrict access to the Services including,
             without limitation, other accounts, computer systems, or networks
             connected to the Services; and (vi) you will not violate,
-            misappropriate or infringe the rights of Trust Wallet, our users, or
+            misappropriate or infringe the rights of Reivun Wallet, our users, or
             others, including privacy, publicity, intellectual property, or
             other proprietary rights. Although we have no obligation to monitor
             any user content, we have absolute discretion to take any necessary
             actions any time and for any reason without notice in the event you
-            breach these Terms. Any use of Trust Wallet other than as
+            breach these Terms. Any use of Reivun Wallet other than as
             specifically authorized in these Terms, without our prior written
             permission, is strictly prohibited and we shall have the right to
-            terminate your license to use Trust Wallet immediately without
+            terminate your license to use Reivun Wallet immediately without
             notice. You acknowledge and accept that by using the Services, you
             may be exposed to content that is offensive, indecent, or
             objectionable. We take no responsibility and assume no liability for
@@ -612,11 +612,11 @@ const Terms = () => {
             liability related to any losses, damages, or claims arising from:
             (a) user error such as forgotten passwords, incorrectly constructed
             transactions, or mistyped Digital Asset addresses; (b) server
-            failure or data loss; (c) unauthorized access to the Trust Wallet
-            application; (d) bugs or other errors in the Trust Wallet software;
+            failure or data loss; (c) unauthorized access to the Reivun Wallet
+            application; (d) bugs or other errors in the Reivun Wallet software;
             and (e) any unauthorized third party activities, including, but not
             limited to, the use of viruses, phishing, brute forcing, or other
-            means of attack against Trust Wallet. We make no representations
+            means of attack against Reivun Wallet. We make no representations
             concerning any Third Party Content contained in or accessed through
             our Services. Any other terms, conditions, warranties, or
             representations associated with such content, are solely between you
@@ -642,7 +642,7 @@ const Terms = () => {
               ADDRESS AND/OR PRIVATE KEY DUE TO YOUR FAILURE TO MAINTAIN THE
               CONFIDENTIALITY OF YOUR WALLET, ANY INTERRUPTION OR CESSATION OF
               TRANSMISSION TO OR FROM THE SERVICES OR ANY BUGS, VIRUSES, TROJAN
-              HORSES, OR THE LIKE THAT ARE FOUND IN THE TRUST WALLET SOFTWARE OR
+              HORSES, OR THE LIKE THAT ARE FOUND IN THE Reivun Wallet SOFTWARE OR
               THAT MAY BE TRANSMITTED TO OR THROUGH OUR SERVICES BY ANY THIRD
               PARTY (REGARDLESS OF THE SOURCE OF ORIGINATION); ANY ACTIONS WE
               TAKE OR FAIL TO TAKE AS A RESULT OF COMMUNICATIONS YOU SEND TO US;
@@ -651,12 +651,12 @@ const Terms = () => {
               DELETIONS OR DEFECTS OF ANY DEVICE OR NETWORK, PROVIDERS, OR
               SOFTWARE (INCLUDING, BUT NOT LIMITED TO, THOSE THAT DO NOT PERMIT
               PARTICIPATION IN OUR SERVICES); ANY INJURY OR DAMAGE TO COMPUTER
-              EQUIPMENT; INABILITY TO FULLY ACCESS OUR WEBSITE, TRUST WALLET OR
+              EQUIPMENT; INABILITY TO FULLY ACCESS OUR WEBSITE, Reivun Wallet OR
               THE SERVICES OR ANY OTHER WEBSITE; THEFT, TAMPERING, DESTRUCTION,
               OR UNAUTHORIZED ACCESS TO, IMAGES OR OTHER CONTENT OF ANY KIND;
               DATA THAT IS PROCESSED LATE OR INCORRECTLY OR IS INCOMPLETE OR
               LOST; TYPOGRAPHICAL, PRINTING OR OTHER ERRORS, OR ANY COMBINATION
-              THEREOF; OR ANY OTHER MATTER RELATING TO THE WEBSITE, TRUST WALLET
+              THEREOF; OR ANY OTHER MATTER RELATING TO THE WEBSITE, Reivun Wallet
               APPLICATION OR ANY OTHER ASPECT OF THE SERVICES. SOME
               JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF
               LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, SO THE ABOVE
@@ -672,7 +672,7 @@ const Terms = () => {
               Warranty Disclaimer
             </h3>
             <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
-              TRUST WALLET IS PROVIDED "AS IS" AND “AS AVAILABLE”, AND WITHOUT
+              Reivun Wallet IS PROVIDED "AS IS" AND “AS AVAILABLE”, AND WITHOUT
               WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE
               DISCLAIM ALL REPRESENTATIONS AND WARRANTIES, EXPRESS OR IMPLIED,
               RELATING TO THE SERVICES AND UNDERLYING SOFTWARE OR ANY ASPECT OF
@@ -689,7 +689,7 @@ const Terms = () => {
               AVAILABLE, CURRENT, FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS,
               OR THAT THE RESULTS OF USING THE SERVICES WILL MEET YOUR
               REQUIREMENTS. WE DO NOT MAKE ANY REPRESENTATIONS OR GIVE
-              WARRANTIES THAT THE ACCESS TO TRUST WALLET OR USE OF THE SERVICES
+              WARRANTIES THAT THE ACCESS TO Reivun Wallet OR USE OF THE SERVICES
               AND THE FUNCTIONALITY THEREOF WILL BE CONTINUOUS, UNINTERRUPTED,
               TIMELY OR ERROR-FREE. SOME STATES DO NOT ALLOW THE DISCLAIMER OF
               IMPLIED WARRANTIES, SO THE FOREGOING DISCLAIMERS MAY NOT APPLY TO
@@ -710,7 +710,7 @@ const Terms = () => {
             costs or debt, and expenses (including, but not limited to,
             attorney’s fees) arising from: (a) your use of and access to the
             Services; (b) any feedback or submissions you provide to us
-            concerning Trust Wallet; (c) violation of any Third Party Content
+            concerning Reivun Wallet; (c) violation of any Third Party Content
             (d) your violation of the Terms; or (e) your violation of any law,
             rule, or regulation, or the rights of any third party.
           </p>
@@ -792,7 +792,7 @@ const Terms = () => {
             time without cost or loss of your Digital Assets. If you do not
             maintain a backup of your wallet data outside of the Services, you
             will not be able to access the Digital Assets associated with your
-            wallet. Trust Wallet shall not be held responsible or liable for any
+            wallet. Reivun Wallet shall not be held responsible or liable for any
             loss of Digital Assets in the event that we discontinue all or any
             part of the Services.
           </p>
@@ -850,7 +850,7 @@ const Terms = () => {
             PROCEEDING TO ENFORCE THESE TERMS SHALL BE ENTITLED TO COSTS AND
             ATTORNEYS’ FEES. THE ARBITRAL DECISION MAY BE ENFORCED IN ANY COURT.
             WHETHER THE DISPUTE IS HEARD IN ARBITRATION OR IN COURT, YOU AND
-            TRUST WALLET WILL NOT COMMENCE AGAINST THE OTHER A CLASS ACTION,
+            Reivun Wallet WILL NOT COMMENCE AGAINST THE OTHER A CLASS ACTION,
             CLASS ARBITRATION, OR REPRESENTATIVE ACTION OR PROCEEDING.
           </p>
         </section>

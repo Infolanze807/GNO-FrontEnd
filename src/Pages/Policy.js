@@ -10,7 +10,7 @@ const Policy = () => {
         <section class="m-auto flex w-full max-w-screen-max+padding flex-col-reverse justify-between gap-7 rounded-[20px] bg-trustBlue px-5 py-10 tablet:flex-row tablet:items-center desktop:rounded-[30px] desktop:p-16 desktop:px-[100px]">
           <div>
             <h1 class="default-transition text-trustBlack font-wixMadefor font-bold dark:text-trustWhite text-mobileH1 leading-mobileH1 tablet:text-desktopH1 tablet:leading-desktopH1 !text-trustWhite">
-              Trust Wallet <br /> Privacy and Policy{" "}
+              Reivun Wallet <br /> Privacy and Policy{" "}
             </h1>
             <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyLarge leading-mobileBodyLarge tablet:text-desktopBodyLarge tablet:leading-desktopBodyLarge mt-6 max-w-[35ch] !text-trustWhite">
               Last Updated: Apr 8, 2022
@@ -24,7 +24,7 @@ const Policy = () => {
               Platform, Inc., (“we,” “our,” or “us”) pertaining to the
               collection, use, and disclosure of your information on
               www.trustwallet.com and related mobile applications and products
-              we offer (the “Services” or “Trust Wallet”).
+              we offer (the “Services” or “Reivun Wallet”).
             </h3>
             <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium"></p>
           </div>
@@ -35,7 +35,7 @@ const Policy = () => {
             Platform, Inc., (“we,” “our,” or “us”) pertaining to the collection,
             use, and disclosure of your information on www.trustwallet.com and
             related mobile applications and products we offer (the “Services” or
-            “Trust Wallet”).
+            “Reivun Wallet”).
           </p>
         </section>
         <section class="w-full max-w-screen-max+padding">
@@ -45,7 +45,7 @@ const Policy = () => {
           <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
             Your right to privacy and the protection of your personal data is
             important to us. The following sections provide further details as
-            to how we process your personal information through Trust Wallet. We
+            to how we process your personal information through Reivun Wallet. We
             don’t share your information with third parties except to deliver
             you our Services and products, comply with the law, make Trust
             Wallet better, protect our rights, or effectuate a business
@@ -60,7 +60,7 @@ const Policy = () => {
             How do you accept this policy
           </h2>
           <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
-            By using Trust Wallet, including downloading one of our mobile
+            By using Reivun Wallet, including downloading one of our mobile
             applications or visiting our website, you agree to the use,
             disclosure, and procedures outlined in this Privacy Policy.
           </p>
@@ -71,13 +71,13 @@ const Policy = () => {
           </h2>
           <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
             We do our best to minimize the amount of Personal Information that
-            we collect from Trust Wallet users. Your contact information, such
+            we collect from Reivun Wallet users. Your contact information, such
             as your phone number,, or email address (depending on how you
             contact us), may be collected when you communicate with us for
             support, or if you report a bug or other error related to Trust
             Wallet or when you interact with us through social media. When you
             use our Services, we process PUBLIC wallet addresses that you
-            generate through Trust Wallet.
+            generate through Reivun Wallet.
           </p>
         </section>
         <section class="w-full max-w-screen-max+padding">
@@ -88,8 +88,8 @@ const Policy = () => {
             Information about our users is an important part of our business and
             we are not in the business of selling our users’ personal
             information to others. We may transfer personal data to our service
-            providers or third parties in connection with Trust Wallet’s
-            operation of its business, as certain features on Trust Wallet rely
+            providers or third parties in connection with Reivun Wallet’s
+            operation of its business, as certain features on Reivun Wallet rely
             on various third-party products and services (collectively “Third
             Party Services”), . These third party services providers only have
             access to certain Personal Information, such as your public Wallet
@@ -114,14 +114,14 @@ const Policy = () => {
           </h2>
           <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
             We primarily use the limited information that we collect to enhance
-            Trust Wallet. Except if we sell all or a portion of our business, or
+            Reivun Wallet. Except if we sell all or a portion of our business, or
             as otherwise described below, we do not rent, trade, or sell your
             Personal Information. Some ways we may use your Personal Information
             are to: Contact you when necessary; Respond to your comments,
-            questions, or issues related to bugs or errors with Trust Wallet;
+            questions, or issues related to bugs or errors with Reivun Wallet;
             Provide you with additional information; Send you information and
             marketing materials about services and products available through
-            Trust Wallet, using push notifications or other means; Train our
+            Reivun Wallet, using push notifications or other means; Train our
             team members; Other internal business purposes. Aggregated Personal
             Data and Non-Personal Information We may share or disclose
             aggregated Personal Data or Non-Personal Information with service
@@ -147,13 +147,13 @@ const Policy = () => {
             Information could be one of the assets transferred to or acquired by
             a third party. By accepting this Privacy Notice, as outlined above,
             you consent to any such transfer. Protection of Us and Others We
-            will share personal information outside of Trust Wallet if we have a
+            will share personal information outside of Reivun Wallet if we have a
             reasonable belief that access, use, preservation, or disclosure of
             the information is reasonably necessary to comply with any
             applicable law, regulation, legal process, or enforceable
             governmental request; to cooperate with law enforcement; to enforce
             or apply our Terms of Use and other agreements; or to protect the
-            rights, property, or safety of Trust Wallet, our employees, our
+            rights, property, or safety of Reivun Wallet, our employees, our
             users, or others.
           </p>
         </section>
@@ -181,7 +181,7 @@ const Policy = () => {
             purposes for which it was collected. Any data that is no longer
             needed for purposes specified in the “How We Use the Information We
             Gather” section will be deleted after ninety (90) days. Wallet
-            addresses created through the Trust Wallet application cannot be
+            addresses created through the Reivun Wallet application cannot be
             deleted from the Ethereum blockchain, therefore we are unable to
             delete this personal information. If at any point you wish for Trust
             Wallet to delete information about you, you may contact us at
@@ -200,11 +200,11 @@ const Policy = () => {
           </h2>
           <p class="default-transition text-lightBlack font-inter dark:text-trustWhite text-mobileBodyMedium leading-mobileBodyMedium tablet:text-desktopBodyMedium tablet:leading-desktopBodyMedium">
             Please note that even If you delete your Wallet or addresses from
-            the Trust Wallet mobile application, uninstall Trust Wallet mobile
+            the Reivun Wallet mobile application, uninstall Reivun Wallet mobile
             applications from your device, or request that your information be
             deleted, we still may retain some information that you have provided
-            to us to maintain Trust Wallet or to comply with the laws and
-            regulations to which Trust Wallet is subject. If you have any
+            to us to maintain Reivun Wallet or to comply with the laws and
+            regulations to which Reivun Wallet is subject. If you have any
             question or objection as to how we collect and process your personal
             information, please contact support@trustwallet.com.
           </p>
