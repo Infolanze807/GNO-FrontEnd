@@ -19,6 +19,8 @@ import {AuthProvider} from './Utils/AuthProvider';
 import PrivateRoutes from "./Utils/PrivateRoutes.js";
 import Terms from "./Pages/Terms.js"; 
 import Policy from "./Pages/Policy.js";
+import { MoonPayProvider } from '@moonpay/moonpay-react';
+import MoonPay from './Pages/MoonPay.js';
 
 function App() {
   const [walletAddress, setWalletAddress] = useState("");
@@ -27,6 +29,11 @@ function App() {
 
   }
   return (
+    <MoonPayProvider
+    apiKey="pk_test_6oeV9Fz9yT6TJr4GOx9iJHwJl2i9jkn"
+    debug
+>
+
  <BrowserRouter>
  <AuthProvider>
       <Routes>
@@ -35,6 +42,7 @@ function App() {
       <Route path='/dash' element={<Dashboard />}/>
       </Route>
         <Route path="/" element={<Home />} />
+        <Route path="/moonpay" element={<MoonPay />} />
         <Route path="/sign-up" element={<Welcome />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
@@ -53,6 +61,8 @@ function App() {
       </AuthProvider>
       
       </BrowserRouter> 
+          {/* ... other components */}
+</MoonPayProvider>
   );
 }
 

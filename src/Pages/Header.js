@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../Images/gno-wallet.jpeg"
+import { MoonPayBuyWidget } from '@moonpay/moonpay-react';
+
+
+
+
+    
+      
+
+
 
 const Header = () => {
+
+  const [visible, setVisible] = useState(false);
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const login = () => {
     navigate("/sign-up");
+  };
+  const handleMoonpay = () => {
+    navigate("/moonpay");
   };
 
   const toggleMenu = () => {
@@ -18,7 +32,11 @@ const Header = () => {
     setIsMenuOpen(false);
   }
   return (
+    
     <div>
+       
+   
+  
       <nav className="bg-zinc-800 fixed w-full z-20 top-0 start-0 border-b border-gray-700 dark:border-gray-600">
         <div className="flex flex-wrap items-center justify-between mx-auto p-2 lg:p-3 md:p-3 lg:px-10 md:px-10 px-4">
           <a
@@ -35,6 +53,13 @@ const Header = () => {
             </span>
           </a>
           <div className="flex items-center gap-14">
+          <button
+              type="button"
+              className="text-black bg-[--main-color] hover:bg-[--green-color] transition-all duration-300 font-medium rounded-full text-sm px-7 py-2.5 text-center"
+              onClick={() => handleMoonpay()}  
+            >
+            Buy Crypto
+            </button>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
               type="button"
@@ -43,6 +68,7 @@ const Header = () => {
             >
               Get started
             </button>
+            
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
