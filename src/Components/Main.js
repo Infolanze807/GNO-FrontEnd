@@ -109,7 +109,7 @@ function Main({ walletAddress, privateKey }) {
         <div className="text-white text-xl md:text-2xl lg:text-3xl font-bold pb-5">
           {balance !== null ? `${balance} xDAI (${balanceUSD ? `$ : ${balanceUSD}` : "Calculating..."})` : "Loading..."}
         </div>
-        <div className="grid grid-cols-4 xl:gap-8 lg:gap-6 md:gap-5 sm:gap-3 gap-2 text-black">
+        <div className="grid grid-cols-2 xl:gap-14 lg:gap-10 md:gap-6 sm:gap-4 gap-10 text-black">
           <div className="flex flex-col items-center">
             <button
               onClick={showSend}
@@ -128,7 +128,7 @@ function Main({ walletAddress, privateKey }) {
             </button>
             <p className="text-white">Receive</p>
           </div>
-          <div className="flex flex-col items-center">
+          {/* <div className="flex flex-col items-center">
             <button
               onClick={showSwap}
               className="lg:p-4 md:p-3 sm:p-2 p-2 bg-[--green-color] text-white text-4xl rounded-full"
@@ -136,8 +136,8 @@ function Main({ walletAddress, privateKey }) {
               <MdSwapHorizontalCircle />
             </button>
             <p className="text-white">Swap</p>
-          </div>
-          <div className="flex flex-col items-center">
+          </div> */}
+          {/* <div className="flex flex-col items-center">
             <button
               onClick={showBuy_Sell}
               className="lg:p-4 md:p-3 sm:p-2 p-2 bg-[--green-color] text-white text-4xl rounded-full"
@@ -145,7 +145,7 @@ function Main({ walletAddress, privateKey }) {
               <CiCreditCard1 />
             </button>
             <p className="text-white">Buy & Sell</p>
-          </div>
+          </div> */}
         </div>
         {send && <Send walletAddress={walletAddress} privateKey={privateKey} balance={balance}/>}
         {receive && (<Receive walletAddress={walletAddress}/>)}
