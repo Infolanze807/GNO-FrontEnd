@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from '../Images/gno-wallet.jpeg';
 import QRCode from 'qrcode.react';
 import { FaRegCopy } from 'react-icons/fa';
 import copy from "copy-to-clipboard";

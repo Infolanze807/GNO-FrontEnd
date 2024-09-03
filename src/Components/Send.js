@@ -32,7 +32,7 @@ function Send({ walletAddress, balance }) {
       console.log(decryptedPrivateKey);
       setPrivateKey(decryptedPrivateKey);
       setError(null);
-      setShowPasswordModal(false); // Close modal on success
+      setShowPasswordModal(false); 
       await sendTransaction(values, decryptedPrivateKey);
     } catch (error) {
       setError("Error fetching or decrypting private key. Please try again.");
@@ -48,15 +48,15 @@ function Send({ walletAddress, balance }) {
     }
   
     try {
-      const web3 = getWeb3(); // Ensure getWeb3 is a function and invoke it
+      const web3 = getWeb3(); 
       const amountWei = web3.utils.toWei(values.amount, "ether");
   
       const nonce = await web3.eth.getTransactionCount(walletAddress, "latest");
       const gasPrice = await web3.eth.getGasPrice();
-      const gasLimit = 21000; // Basic transaction gas limit
+      const gasLimit = 21000; 
   
       const tx = {
-        from: walletAddress, // This is your `from` address
+        from: walletAddress,
         to: values.walletAddress,
         value: amountWei,
         gas: gasLimit,
@@ -64,17 +64,12 @@ function Send({ walletAddress, balance }) {
         nonce: nonce,
       };
   
-      // Sign transaction with private key
       const signedTx = await web3.eth.accounts.signTransaction(tx, privateKey);
-  
-      // Send signed transaction
       const txHash = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
       console.log("Transaction sent. TxHash:", txHash);
       setTxHash(txHash.transactionHash);
-  
-      // Send transaction details to backend
       await axios.post(`${process.env.REACT_APP_BACKEND}/wallet/transaction`, {
-        from: walletAddress, // Pass walletAddress as `from`
+        from: walletAddress, 
         to: values.walletAddress,
         txHash: txHash.transactionHash,
         amount: values.amount,

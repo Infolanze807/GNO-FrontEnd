@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaSpinner } from "react-icons/fa"; 
 import axios from "axios";
 import logo from "../Images/gno-wallet.jpeg";
 
@@ -19,6 +20,7 @@ function ImportWallet() {
     "",
   ]);
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false); 
   const navigate = useNavigate();
 
   const handleChange = (index, value) => {
@@ -46,6 +48,7 @@ function ImportWallet() {
   };
 
   const handleNext = async () => {
+    setIsLoading(true);
     const seedPhrase = words.join(" ");
     if (words.every((word) => word.trim() !== "")) {
       try {
@@ -55,11 +58,10 @@ function ImportWallet() {
         );
   
         if (response.data.valid) {
-          // Assuming the backend sends wallet details with a valid seed phrase
-          const { walletDetails } = response.data; // Adjust according to your backend response structure
+          const { walletDetails } = response.data;
           navigate("/new-password", { state: { seedPhrase, walletDetails } });
         } else {
-          setError(response.data.message); // Display the error message from backend
+          setError(response.data.message);
         }
       } catch (error) {
         console.error("Error validating seed phrase:", error);
@@ -68,6 +70,7 @@ function ImportWallet() {
     } else {
       setError("Please fill in all the words to form a complete seed phrase.");
     }
+    setIsLoading(false); 
   };
   
 
@@ -114,11 +117,12 @@ function ImportWallet() {
                 </div>
                 <div>
                   <button
-                    className="bg-[--green-color] text-white text-base w-full rounded-full p-2"
+                    className="bg-[--green-color] text-white text-base w-full rounded-full p-2 flex items-center justify-center"
                     type="submit"
+                    disabled={isLoading} 
                     onClick={handleNext}
                   >
-                    Next
+                  {isLoading ? <FaSpinner className="animate-spin mr-2" /> : "Next"} 
                   </button>
                 </div>
               </div>

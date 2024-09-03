@@ -130,14 +130,14 @@ import { encryptPrivateKey } from "../Utils/Crypto";
 import axios from "axios";
 import logo from "../Images/gno-wallet.jpeg";
 import { FaRegCopy } from "react-icons/fa";
-import { FaSpinner } from "react-icons/fa"; // Import spinner icon
+import { FaSpinner } from "react-icons/fa";
 import copy from "copy-to-clipboard";
 
 function ValidatePassphrase() {
   const [selectedWords, setSelectedWords] = useState([]);
   const [validationIndexes, setValidationIndexes] = useState([]);
   const [validationError, setValidationError] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // State for loading
+  const [isLoading, setIsLoading] = useState(false); 
   const navigate = useNavigate();
   const location = useLocation();
   const { wallet, password } = location.state;
@@ -165,7 +165,7 @@ function ValidatePassphrase() {
     const isValid = validationIndexes.every((index, i) => filledWords[i] === fullPassphraseWords[index]);
 
     if (isValid) {
-      setIsLoading(true); // Start loading
+      setIsLoading(true); 
       const encryptedPrivateKey = encryptPrivateKey(wallet.privateKey, password);
       const walletData = {
         address: wallet.address,
@@ -184,7 +184,7 @@ function ValidatePassphrase() {
       } catch (error) {
         console.error('Error creating wallet:', error);
         setValidationError('Error creating wallet. Please try again.');
-        setIsLoading(false); // Stop loading on error
+        setIsLoading(false); 
       }
     } else {
       setValidationError('The entered words do not match the passphrase.');
@@ -241,9 +241,9 @@ function ValidatePassphrase() {
         <button
           onClick={handleValidatePassphrase}
           className="bg-[--green-color] text-white text-base w-full rounded-full p-2 mt-4 flex items-center justify-center"
-          disabled={isLoading} // Disable button while loading
+          disabled={isLoading} 
         >
-          {isLoading ? <FaSpinner className="animate-spin mr-2" /> : "Create Wallet"} {/* Show loader or text */}
+          {isLoading ? <FaSpinner className="animate-spin mr-2" /> : "Create Wallet"}
         </button>
       </div>
     </div>

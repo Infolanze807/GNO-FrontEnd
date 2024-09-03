@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import Navbar from './Navbar';
 import { getWeb3 } from '../Utils/Rpc';
-import axios from 'axios'; // Ensure axios is imported
+import axios from 'axios'; 
 import copy from "copy-to-clipboard";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Utils/AuthProvider";

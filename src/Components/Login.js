@@ -1,8 +1,6 @@
-
-
 import React, { useState,useEffect } from 'react';
 import { PiEyeFill, PiEyeSlashFill } from "react-icons/pi";
-import { FaSpinner } from "react-icons/fa"; // Import spinner icon
+import { FaSpinner } from "react-icons/fa"; 
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from 'react-router-dom';
@@ -25,7 +23,7 @@ function Login({ setFunctionData}) {
 
   const { login } = useAuth();
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [isLoading, setIsLoading] = useState(false); // State for loading
+  const [isLoading, setIsLoading] = useState(false); 
   const navigate = useNavigate();
   const [error, setError] = useState(null);
   const formik = useFormik({
@@ -37,7 +35,7 @@ function Login({ setFunctionData}) {
     }),
     onSubmit: async (values) => {
       try {
-        setIsLoading(true); // Start loading
+        setIsLoading(true);
         const WalletData = localStorage.getItem("Wallet Data:");
         const FetchWalletData = JSON.parse(WalletData);
         const address = FetchWalletData.Wallet_address;
@@ -46,8 +44,6 @@ function Login({ setFunctionData}) {
         if (response.data && response.data.success) {
           console.log("dd:",response)
           console.log(response.data.address);
-          // localStorage.setItem("Login",response.data.success)
-          // setWalletAddress(response.data.address); 
           setFunctionData(response.data.address);
           console.log("Login successful");
       login("True");
@@ -65,7 +61,7 @@ function Login({ setFunctionData}) {
         }
         console.error("Error during authentication:", error);
       } finally {
-        setIsLoading(false); // Stop loading
+        setIsLoading(false); 
       }
     },
   });
@@ -127,9 +123,9 @@ function Login({ setFunctionData}) {
                 <button
                   className="bg-[--green-color] text-white text-base w-full rounded-full p-2 flex items-center justify-center"
                   type="submit"
-                  disabled={isLoading} // Disable button while loading
+                  disabled={isLoading} 
                 >
-                  {isLoading ? <FaSpinner className="animate-spin mr-2" /> : "Unlock"} {/* Show loader or text */}
+                  {isLoading ? <FaSpinner className="animate-spin mr-2" /> : "Unlock"} 
                 </button>
               </div>
             </div>

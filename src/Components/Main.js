@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { IoMdArrowRoundUp, IoMdArrowRoundDown } from "react-icons/io";
-import { MdSwapHorizontalCircle } from "react-icons/md";
-import { CiCreditCard1 } from "react-icons/ci";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import { getWeb3 } from "../Utils/Rpc";
@@ -68,7 +66,7 @@ function Main({ walletAddress, privateKey }) {
   const fetchExchangeRate = async () => {
     try {
       const response = await axios.get(`${process.env.REACT_APP_BACKEND}/wallet/exchange-balance`);
-      const exchangeRate = response.data.Price; // Make sure this matches the API response
+      const exchangeRate = response.data.Price; 
 
       if (typeof exchangeRate === 'number' && exchangeRate > 0) {
         if (balance !== null) {
